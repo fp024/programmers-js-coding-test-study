@@ -1,0 +1,20 @@
+{
+  "name": "programmers-js-coding-test-study",
+  "packageManager": "yarn@4.6.0",
+  "type": "module",
+  "dependencies": {
+    "jest": "^29.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.8",
+    "@babel/preset-env": "^7.26.8",
+    "babel-jest": "^29.7.0",
+    "babel-loader": "^9.2.1",
+    "prettier": "^3.5.0",
+    "webpack": "^5.97.1"
+  },
+  "scripts": {
+    "test": "jest --passWithNoTests",
+    "format": "prettier --write \"./**/*.{js,json,ts}\""
+  }
+}
