@@ -50,6 +50,7 @@ Yarn 프로젝트이고, TypeScript를 사용하지 않지만, Prettier 설정�
 
 
 * Jest 없이 단순하게 코드를 실행하고 싶을 때
-  *  VSCode 환경에서는 CodeRunner를 사용하자!
+  코드와 입출력 값이 너무 단순할 때는 반드시 테스트 케이스를 만들지 않아도 되겠다. 😅
+	* VSCode 환경에서는 CodeRunner를 사용하자!
     * https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
 
