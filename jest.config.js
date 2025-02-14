@@ -1,9 +1,9 @@
 /** @type {import('jest').Config} */
 const config = {
-  moduleFileExtensions: ["js", "mjs"],
-  testEnvironment: "node",
+  moduleFileExtensions: ['js', 'mjs'],
+  testEnvironment: 'node',
   transform: {
-    "^.+\\.m?js$": "babel-jest",
+    '^.+\\.m?js$': 'babel-jest',
   },
 };
 

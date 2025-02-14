@@ -4,7 +4,7 @@
 
   한줄 입력을 하고 Ctrl + C로 끝내면 close 이벤트 부분이 실행되서 출력이 된다.
  */
-import readline from "readline";
+import readline from 'readline';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -13,9 +13,9 @@ const rl = readline.createInterface({
 
 let input = [];
 
-rl.on("line", function (line) {
+rl.on('line', function (line) {
   input = [line];
-}).on("close", function () {
+}).on('close', function () {
   let str = input[0];
   console.log(str);
 });

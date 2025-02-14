@@ -5,7 +5,7 @@
 export default function solution(num_str) {
   let answer = 0;
 
-  let numArray = num_str.split("");
+  let numArray = num_str.split('');
 
   for (const num of numArray) {
     answer += Number(num);

@@ -9,7 +9,10 @@
     "/pnp.cjs",
     "/pnp.loader.mjs"
   ],
-  "words": [],
+  "words": [
+    "ababababab",
+    "Worl"
+  ],
   "ignoreWords": [],
   "import": []
 }

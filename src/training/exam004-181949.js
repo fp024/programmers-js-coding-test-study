@@ -7,9 +7,9 @@
    여기에다가는 알아서 solution()로 변환해서 테스트하면 될 것 같다. 😅
  */
 function solution(str) {
-  let result = "";
+  let result = '';
 
-  let strArray = str.split("");
+  let strArray = str.split('');
 
   for (const char of strArray) {
     if (char.toUpperCase() === char) {
@@ -23,4 +23,4 @@ function solution(str) {
 }
 
 // 검증
-console.log(solution("aBcDeFg") === "AbCdEfG");
+console.log(solution('aBcDeFg') === 'AbCdEfG'); // NOSONAR
