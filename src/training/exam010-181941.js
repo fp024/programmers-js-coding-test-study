@@ -10,4 +10,4 @@ function solution(arr) {
   return answer;
 }
 // 단순 실행 테스트
-console.log(solution(['a', 'b', 'c']) === 'abc');
+console.log(solution(['a', 'b', 'c']) == 'abc');
