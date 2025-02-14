@@ -4,6 +4,7 @@
     "streetsidesoftware.code-spell-checker",
     "firsttris.vscode-jest-runner",
     "formulahendry.code-runner",
+    "EditorConfig.EditorConfig",
     "arcanis.vscode-zipfs"
   ]
 }
