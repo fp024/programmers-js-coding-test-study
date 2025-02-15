@@ -13,5 +13,19 @@
   },
   "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "jestrunner.jestCommand": "yarn jest",
-  "jestrunner.enableYarnPnpSupport": true
+  "jestrunner.enableYarnPnpSupport": true,
+
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+
+  "jestrunner.debugOptions": {
+    "runtimeExecutable": "yarn",
+    "runtimeArgs": [
+      "jest",
+      "${fileBasename}",
+      "--runInBand",
+      "--no-cache",
+      "--watchAll=false",
+      "--color"
+    ]
+  },
 }
