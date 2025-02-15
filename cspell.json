@@ -10,12 +10,14 @@
     "/pnp.loader.mjs"
   ],
   "words": [
+  ],
+  "ignoreWords": [
     "ababababab",
+    "acbac",
     "ineq",
     "lovelovelovelovelovelovelovelovelovelove",
     "stringstringstring",
     "Worl"
   ],
-  "ignoreWords": [],
   "import": []
 }
