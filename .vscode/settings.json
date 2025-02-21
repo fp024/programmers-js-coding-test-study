@@ -31,6 +31,7 @@
   },
   "code-runner.executorMap": {
     "javascript": "node",
-    "typescript": "yarn cross-env NODE_NO_WARNINGS=1 yarn ts-node-esm" // 💡ts-node-esm 실행은 node v23 환경에서 정상 동작했다.
-  }
+    "typescript": "yarn cross-env NODE_OPTIONS=\"--no-deprecation --disable-warning=ExperimentalWarning\" yarn ts-node-esm" // 💡ts-node-esm 실행은 node v23 환경에서 정상 동작했다.
+  },
+  "code-runner.clearPreviousOutput": true
 }
