@@ -15,3 +15,5 @@ cspell.json
 .idea
 
 .yarn
+
+dist

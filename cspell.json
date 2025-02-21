@@ -7,10 +7,11 @@
     "/.yarn/**",
     "/yarn.lock",
     "/pnp.cjs",
-    "/pnp.loader.mjs"
+    "/pnp.loader.mjs",
+    "tsconfig.json"
   ],
   "words": [
-    
+
   ],
   "ignoreWords": [
     "ababababab",
@@ -22,7 +23,8 @@
     "wsdawsdassw",
     "cvsgiorszzzmrpaqpe",
     "zpiaz",
-    "rermgorpsam"
+    "rermgorpsam",
+    "Strs"
   ],
   "import": []
 }

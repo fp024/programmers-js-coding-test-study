@@ -19,3 +19,6 @@
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
+
+# dist
+/dist
