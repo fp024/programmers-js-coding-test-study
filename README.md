@@ -10,7 +10,7 @@
 
 ### 스터디 프로젝트  구성
 
-Yarn 프로젝트이고, TypeScript를 사용하지 않지만, Prettier 설정을 위해 다음 설정을 하였다.
+Yarn 프로젝트이고, Prettier 설정을 위해 다음 설정을 하였었는데, 이후에 TypeScript도 사용하게 되었다.
 
 * [Editor SDKs | Yarn](https://yarnpkg.com/getting-started/editor-sdks)
 
