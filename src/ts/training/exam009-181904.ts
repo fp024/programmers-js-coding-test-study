@@ -18,7 +18,7 @@ console.log(solution('ihrhbakrfpndopljhygc', 4, 2));
 console.log(solution('programmers', 1, 1));
 
 // === 문제 읽고 첫 느낌 ===
-//
+// ...
 // === 다른 사람 풀이 확인 이후 의견 ===
 // ...
 //
