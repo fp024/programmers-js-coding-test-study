@@ -71,7 +71,7 @@ console.log(solution(5));
 //   * 뭔가 심오하다!
 //     * https://school.programmers.co.kr/questions/76926
 // === 다른 사람 풀이 확인 이후 의견 ===
-//   * 💡그나마 아래 링크의 코드를 보면서 TS로 바꿨다.
+//   * 💡그나마 이해가 쉬운 편인 아래 링크의 코드를 보면서 TS로 바꿨다.
 //     * https://school.programmers.co.kr/questions/75142
 // === 기타 참고 ===
 // * https://dev.to/ivanzm123/dont-use-enums-in-typescript-they-are-very-dangerous-57bh
