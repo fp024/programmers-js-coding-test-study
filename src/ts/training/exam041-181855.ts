@@ -28,5 +28,5 @@ console.log(solution(['a', 'bc', 'd', 'efg', 'hi']));
 // === 힌트 ===
 // ...
 // === 다른 사람 풀이 확인 이후 의견 ===
-// ...
+//   Map에 values()라는 메서드가 있었다. 그걸 바로 전개연산해서 max()를 구해도 된다.
 export default solution;
