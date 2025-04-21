@@ -1,7 +1,7 @@
 import solution from './exam021-181832';
 
 describe('solution', () => {
-  it('TestCase 01', () => {
+  test('TestCase 01', () => {
     expect(solution(4)) //
       .toEqual([
         [1, 2, 3, 4],
@@ -11,7 +11,7 @@ describe('solution', () => {
       ]);
   });
 
-  it('TestCase 02', () => {
+  test('TestCase 02', () => {
     expect(solution(5)) //
       .toEqual([
         [1, 2, 3, 4, 5],

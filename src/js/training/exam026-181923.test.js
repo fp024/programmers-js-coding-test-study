@@ -1,7 +1,7 @@
 import solution from './exam026-181923.js';
 
 describe('solution', () => {
-  it('TestCase 01', () => {
+  test('TestCase 01', () => {
     expect(
       solution(
         [0, 1, 2, 4, 3],
