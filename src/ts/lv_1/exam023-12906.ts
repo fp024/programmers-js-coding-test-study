@@ -3,7 +3,14 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12906
  */
 function solution(arr: number[]) {
-  return arr.filter((n, i) => n !== arr[i + 1]);
+  // 마지막 요소를 따로 저장
+  const lastElement = arr[arr.length - 1];
+
+  // 마지막 요소 제외하고 filter
+  const filtered = arr.slice(0, -1).filter((n, i) => n !== arr[i + 1]);
+
+  // 마지막 요소 추가
+  return [...filtered, lastElement];
 }
 
 // === 단순 실행 테스트 ===
