@@ -5,14 +5,17 @@
 function solution(arr: number[]) {
   let answer: number[] = [];
 
-  answer.push(arr[0]);
+  // answer.push(arr[0]);
+  let numStr = '' + arr[0];
 
   for (let i = 1; i < arr.length; i++) {
     if (arr[i - 1] != arr[i]) {
-      answer.push(arr[i]);
+      // answer.push(arr[i]);
+      numStr += arr[i];
     }
   }
 
+  answer = numStr.split('').map((v) => Number(v));
   return answer;
 }
 
