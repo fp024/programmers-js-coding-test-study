@@ -3,16 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12906
  */
 function solution(arr: number[]) {
-  let numStr = '' + arr[0];
-
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i - 1] != arr[i]) {
-      numStr += arr[i];
-    }
-  }
-
-  let answer = numStr.split('').map((v) => Number(v));
-  return answer;
+  return arr.filter((n, i) => n !== arr[i + 1]);
 }
 
 // === 단순 실행 테스트 ===
