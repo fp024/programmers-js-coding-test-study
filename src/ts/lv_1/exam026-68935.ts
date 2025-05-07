@@ -3,18 +3,16 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/68935
  */
 function solution(n: number) {
-  let answer = 0;
-
   const d = decimalToReverseBase3(n);
-  const f = base3ToDecimal(d);
-  answer = f;
-
-  return answer;
+  return base3ToDecimal(d);
 }
 
 function decimalToReverseBase3(n: number) {
   let t: number[] = [];
   let divResult = n;
+  if (n < 3) {
+    return n;
+  }
   while (true) {
     t.push(divResult % 3);
     divResult = Math.trunc(divResult / 3);
@@ -37,9 +35,13 @@ function base3ToDecimal(n: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution(45));
+// console.log(solution(45));
 
-console.log(solution(125));
+// console.log(solution(125));
+
+console.log(solution(1));
+console.log(solution(2));
+console.log(solution(3));
 
 // === 문제 읽고 첫 느낌 ===
 //   입력된 수를 3진법으로 바꾸고 뒤집어서 다시 10진법으로 반환하는 문제인데,
@@ -65,7 +67,7 @@ console.log(solution(125));
 //    TS/JS가 고차함수 쓰는게 매우 편해서 막쓰게되는데... 잘모르겠다.. 😅
 //    Java로 했으면 뭔가 힘들었을 것 같긴한데...
 //
-//    이 코드 제출에 테스트 케이스 1번, 10번이 실패한다. 😅
+//    이 코드 제출에 테스트 케이스 10번이 실패한다.
 //
 // === 다른 사람 풀이 확인 이후 의견 ===
 // ..
