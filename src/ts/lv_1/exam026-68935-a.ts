@@ -1,29 +1,21 @@
 /*
- * 3진법 뒤집기 - 10번 테스트 케이스가 실패하는 코드
+ * 3진법 뒤집기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/68935
  */
 function solution(n: number) {
-  const d = decimalToReverseBase3(n);
-  return base3ToDecimal(d);
+  const d = decimalToBase3Str(n);
+  return parseInt(d, 3);
 }
 
-function decimalToReverseBase3(n: number) {
-  let t: number[] = [];
+function decimalToBase3Str(n: number) {
+  let t = '';
   let divResult = n;
+
   while (divResult >= 3) {
-    t.push(divResult % 3);
+    t = (divResult % 3) + t;
     divResult = Math.trunc(divResult / 3);
   }
-  t.push(divResult);
-
-  return BigInt(t.join(''));
-}
-
-function base3ToDecimal(n: BigInt) {
-  const nStr = n.toString();
-  const nArr = nStr.split('').reverse();
-
-  return nArr.reduce((acc, f, i) => acc + Number(f) * 3 ** i, 0);
+  return (divResult + t).split('').reverse().join('');
 }
 
 // === 단순 실행 테스트 ===
@@ -37,6 +29,7 @@ console.log(solution(3));
 
 console.log(solution(99_999_999));
 console.log(solution(100_000_000));
+
 // === 문제 읽고 첫 느낌 ===
 //   입력된 수를 3진법으로 바꾸고 뒤집어서 다시 10진법으로 반환하는 문제인데,
 //   3진법으로 어떻게 바꿔야하나? 이렇게 2진법을 기준으로 바꿨던 것 같다.
@@ -60,16 +53,14 @@ console.log(solution(100_000_000));
 //
 //    TS/JS가 고차함수 쓰는게 매우 편해서 막쓰게되는데... 잘모르겠다.. 😅
 //    Java로 했으면 뭔가 힘들었을 것 같긴한데...
+//    그런데.. Java는 parseInt에 진법 기준 변환 기능이 포함되어 있음.. 😅
 //
 //    이 코드 제출에 테스트 케이스 10번이 실패한다.
-//
-// === AI 질문
-//    문자열로 처리후 parseInt로 제출해서 통과는 했는데, 처음에 생각해던 코드가 10번 테스트 케이스에서 왜 실패하는지?
-//    코드 비교를 부탁했는데, `decimalToReverseBase3` 함수에 정밀도 문제가 있을 것 같다고 말해줬다.
-//    AI는 전부 문자열 처리를 하면 될 것 같다고 했는데, 혹시나해서,
-//    join으로 합친 수를 BigInt로 바꿔봤을 때, 10번 테스트 케이스가 통과하는 것을 확인했다.
+//    ---
+//    JS의 parseInt도 진법 변환이 되어서, 그부분에 맞춰서 코드를 바꾸니, 10번 테스트가 통과한다. 😅
+//    10진법 변환함수는 제거했다.
 //
 // === 다른 사람 풀이 확인 이후 의견 ===
-// ..
+//    첫번째 풀이를 보면 한줄로 해결하셨던데... toString()도 인자를 주면 진법 변환이 된다.
 //
 export default solution;
