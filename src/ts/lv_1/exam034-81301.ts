@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/81301
  */
 function solution(s: string) {
-  let answer = 0;
+  let answer;
 
   const numberSymbols = [
     'zero',
@@ -33,12 +33,12 @@ function solution(s: string) {
     } else if (i - lastNumberIdx >= 3) {
       // 적어도 영문자 처리시 3글자 이상이므로.. 인덱스 간격이 3이상일 때 검사한다.
 
-      let partString = s.slice(lastNumberIdx + 1, i + 1);
+      const partString = s.slice(lastNumberIdx + 1, i + 1);
       const idx = numberSymbols.indexOf(partString);
 
       if (idx >= 0) {
         answerString = answerString + numbers[idx];
-        lastNumberIdx = i; // 단일 숫자 문자는 바로 처리할 수 있으므로 처리된 인덱스를 저장해둔다.
+        lastNumberIdx = i; // 숫자 문자열이 처리되었을 때의 인덱스를 저장해둔다.
       }
     }
   }
