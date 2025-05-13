@@ -5,13 +5,13 @@
 function solution(a: number, b: number, n: number) {
   let answer = 0;
 
-  let 가지고있는_콜라병 = n;
+  let currentBottles = n;
 
-  while (가지고있는_콜라병 >= a) {
-    const r = 가지고있는_콜라병 % a;
-    const 교환받은_콜라병_개수 = Math.trunc((가지고있는_콜라병 - r) / a) * b;
-    가지고있는_콜라병 = 가지고있는_콜라병 - (가지고있는_콜라병 - r) + 교환받은_콜라병_개수;
-    answer += 교환받은_콜라병_개수;
+  while (currentBottles >= a) {
+    const remainder = currentBottles % a;
+    const exchangedBottles = Math.trunc((currentBottles - remainder) / a) * b;
+    currentBottles = currentBottles - (currentBottles - remainder) + exchangedBottles;
+    answer += exchangedBottles;
   }
 
   return answer;
