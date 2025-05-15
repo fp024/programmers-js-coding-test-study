@@ -7,7 +7,7 @@ function solution(a: number, b: number) {
   const MONTH_DAYS = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
   const targetDays = MONTH_DAYS.filter((_, i) => i < a - 1).reduce((acc, d) => acc + d, 0) + b - 1;
   console.log(targetDays);
-  return DAY_NAMES[targetDays % 7];
+  return DAY_NAMES[targetDays % DAY_NAMES.length];
 }
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
