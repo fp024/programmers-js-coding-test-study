@@ -14,11 +14,8 @@ function solution(n: number, m: number, section: number[]) {
     if (filledIdx >= emptyWallPos) {
       continue;
     }
-    if (emptyWallPos + m - 1 < n + m) {
-      filledIdx = emptyWallPos + m - 1;
-      answer++;
-    }
-    console.log(filledIdx, emptyWallPos);
+    filledIdx = emptyWallPos + m - 1;
+    answer++;
   }
 
   return answer;
