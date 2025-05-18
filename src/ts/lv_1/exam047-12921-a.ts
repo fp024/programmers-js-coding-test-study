@@ -17,21 +17,19 @@ function solution(n: number) {
   return prime.length;
 }
 
-// 어떤 수의 약수 카운트를 하는데, (3개까지만 검사하자.)
+// 어떤 수의 소수를 목록을 구함
 function makePrimes(n: number, prime: number[]) {
   let count = 1;
 
-  if (prime[0] > Math.sqrt(n)) {
+  if (prime[0] * prime[0] > n) {
     prime.push(n);
-    return 2;
+    return;
   }
 
-  for (let i = 0; count < 2 && prime[i] <= Math.sqrt(n); i++) {
+  for (let i = 0; count < 2 && prime[i] * prime[i] <= n; i++) {
     if (n % prime[i] === 0) {
       count++;
-      if (n / prime[i] !== prime[i]) {
-        count++;
-      }
+      break;
     }
   }
 
