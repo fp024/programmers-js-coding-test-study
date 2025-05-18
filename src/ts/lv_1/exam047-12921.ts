@@ -4,9 +4,9 @@
  * @param n   숫자
  */
 function solution(n: number) {
-  let answer = 0;
+  let answer = 1; // 2는 이미 있다고 간주
 
-  for (let i = 2; i <= n; i++) {
+  for (let i = 3; i <= n; i = i + 2) {
     // 1과 자기 자신만 약수로 가지는 수인지 확인
     if (divisorCount(i) === 2) {
       answer++;
