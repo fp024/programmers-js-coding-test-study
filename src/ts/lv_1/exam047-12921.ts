@@ -16,10 +16,10 @@ function solution(n: number) {
   return answer;
 }
 
-// 어떤 수의 약수 카운트
+// 어떤 수의 약수 카운트를 하는데, (3개까지만 검사하자.)
 function divisorCount(n: number) {
   let count = 0;
-  for (let i = 1; i <= Math.sqrt(n); i++) {
+  for (let i = 1; count < 3 && i <= Math.sqrt(n); i++) {
     if (n % i === 0) {
       count++;
       if (n / i !== i) {
