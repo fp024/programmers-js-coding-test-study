@@ -1,5 +1,5 @@
 /**
- * 소수 찾기
+ * 소수 찾기 - 💢 효율성 테스트 1,2,4가 실패한다.
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12921
  * @param n   숫자
  */
