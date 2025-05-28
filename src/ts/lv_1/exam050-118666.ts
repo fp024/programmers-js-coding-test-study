@@ -2,7 +2,7 @@
  * 성격 유형 검사하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/118666
  *
- * 그동안 얼마간 Java로 Lv1 문제를 풀었었는데, 다시 돌아왔다.😅 확실히 JS/TS가 테이터 정의하기가 편함. 👍
+ * 그동안 얼마간 Java로 Lv1 문제를 풀었었는데, 다시 돌아왔다.😅 확실히 JS/TS가 데이터 정의하기가 편함. 👍
  */
 function solution(survey: string[], choices: number[]) {
   let answer = '';
