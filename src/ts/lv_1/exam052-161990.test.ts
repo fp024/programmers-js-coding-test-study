@@ -44,6 +44,6 @@ const DEFAULT_TEST_CASES = [
 
 describe('바탕화면 정리', () => {
   test.each(DEFAULT_TEST_CASES)('기본 테스트 케이스 검증', ({ wallpaper, expected }) => {
-    expect(solution(wallpaper)).toBe(expected);
+    expect(solution(wallpaper)).toEqual(expected);
   });
 });
