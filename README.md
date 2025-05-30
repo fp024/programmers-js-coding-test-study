@@ -14,6 +14,11 @@ Yarn 프로젝트이고, Prettier 설정을 위해 다음 설정을 하였었는
 
 * [Editor SDKs | Yarn](https://yarnpkg.com/getting-started/editor-sdks)
 
+* TypeScript 관련 라이브러리가 버전없되었을 때, 다음 명령을 실행해주자!
+  ```sh
+  yarn dlx @yarnpkg/sdks vscode
+  ```
+
 
 
 ### 프로젝트 초기화
