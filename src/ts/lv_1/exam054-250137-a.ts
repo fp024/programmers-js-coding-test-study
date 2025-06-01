@@ -3,8 +3,6 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/250137
  */
 function solution(bandage: number[], health: number, attacks: number[][]) {
-  let answer;
-
   const MAX_HP = health;
   const [castTime, recoverPerSec, extraRecover] = bandage;
 
@@ -14,15 +12,21 @@ function solution(bandage: number[], health: number, attacks: number[][]) {
   let consecutiveSuccessTime = 0;
 
   for (let [attackTime, damage] of attacks) {
-    // 공격시간 전
-    for (let t = prevAttackTime + 1; t < attackTime; t++) {
-      health = Math.min(health + recoverPerSec, MAX_HP);
-      consecutiveSuccessTime++;
+    // 공격시간 전 (반복문 대신 수학적 계산 사용)
+    const healingTime = attackTime - prevAttackTime - 1; // 회복 가능한 시간
+    if (healingTime > 0) {
+      // 완전한 시전 주기 횟수 계산
+      const completeCycles = Math.floor((consecutiveSuccessTime + healingTime) / castTime);
+      // 남은 연속 성공 시간
+      consecutiveSuccessTime = (consecutiveSuccessTime + healingTime) % castTime;
 
-      if (consecutiveSuccessTime === castTime) {
-        health = Math.min(health + extraRecover, MAX_HP);
-        consecutiveSuccessTime = 0;
-      }
+      // 기본 회복량 계산
+      const basicHeal = healingTime * recoverPerSec;
+      // 추가 회복량 계산 (완전한 주기마다)
+      const bonusHeal = completeCycles * extraRecover;
+
+      // 체력 회복 적용 (최대 체력 제한)
+      health = Math.min(health + basicHeal + bonusHeal, MAX_HP);
     }
 
     // 공격시간
@@ -35,9 +39,7 @@ function solution(bandage: number[], health: number, attacks: number[][]) {
     }
   }
 
-  answer = health <= 0 ? -1 : health;
-
-  return answer;
+  return health <= 0 ? -1 : health;
 }
 
 // === 단순 실행 테스트 ===
@@ -91,10 +93,10 @@ console.log(
 );
 // cspell:enable
 // === 문제 읽고 첫 느낌 ===
-//   처음에는 1부터 줄줄이 시간을 반복할까하다가..
-//   공격시간 기준으로 맞춰서 흐르는 시간 계산해서 하긴했는데.. 기본 테스트는 통과했다. 😅
+// ...
 //
 // === 다른 사람 풀이 확인 이후 의견 ===
-//   첫번째 풀이가 내가 했던 내부 반복을 계산식으로 잘 해결한 것 같다. 👍👍
+//   이중 for문을 없앨 수도 있겠다. 계산식으로 한번에 처리할 수도 있을 것 같긴하다.
+//   그 최적화는 JetBrains AI에게 부탁했는데, 잘 해결해주었다.
 //
 export default solution;

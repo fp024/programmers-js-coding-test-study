@@ -1,4 +1,5 @@
 import solution from './exam054-250137';
+import solution_a from './exam054-250137-a';
 
 // cspell:disable
 const DEFAULT_TEST_CASES = [
@@ -50,6 +51,15 @@ describe('[PCCP 기출문제] 1번 / 붕대 감기', () => {
     '기본 테스트 케이스 검증',
     ({ bandage, health, attacks, expected }) => {
       expect(solution(bandage, health, attacks)).toBe(expected);
+    }
+  );
+});
+
+describe('[PCCP 기출문제] 1번 / 붕대 감기 - 내부반복 최적화 AI', () => {
+  test.each(DEFAULT_TEST_CASES)(
+    '기본 테스트 케이스 검증',
+    ({ bandage, health, attacks, expected }) => {
+      expect(solution_a(bandage, health, attacks)).toBe(expected);
     }
   );
 });
