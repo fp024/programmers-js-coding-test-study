@@ -4,7 +4,11 @@
  */
 function solution(n: number) {
   let answer = 0;
-  let halfN = Math.trunc(n);
+  let halfN = Math.trunc(n / 2);
+
+  if (n <= 2) {
+    return 1;
+  }
 
   for (let i = halfN + 1; i >= 1; i--) {
     let sum = 0;
@@ -16,7 +20,7 @@ function solution(n: number) {
     }
   }
 
-  return answer;
+  return answer + 1;
 }
 
 // === 단순 실행 테스트 ===
@@ -28,6 +32,7 @@ console.log(solution(2));
 // cspell:enable
 // === 문제 읽고 첫 느낌 ===
 //   뭔가 바로 떠오르는 문제는 아님?
+//   2중 루프를 제거해야 통과가 될 것 같다. 😂
 //
 // === 다른 사람 풀이 확인 이후 의견 ===
 // ...
