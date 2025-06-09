@@ -6,9 +6,9 @@ function solution(n: number) {
   let answer = 0;
   let halfN = Math.trunc(n);
 
-  for (let i = 1; i <= halfN + 1; i++) {
+  for (let i = halfN + 1; i >= 1; i--) {
     let sum = 0;
-    for (let j = i; sum <= n; j++) {
+    for (let j = i; sum <= n && j >= 1; j--) {
       sum += j;
       if (sum === n) {
         answer++;
