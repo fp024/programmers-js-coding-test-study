@@ -1,4 +1,5 @@
 import solution from './exam055-258712';
+import solution_a from './exam055-258712-a';
 
 // cspell:disable
 const DEFAULT_TEST_CASES = [
@@ -45,5 +46,11 @@ const DEFAULT_TEST_CASES = [
 describe('가장 많이 받은 선물', () => {
   test.each(DEFAULT_TEST_CASES)('기본 테스트 케이스 검증', ({ friends, string, expected }) => {
     expect(solution(friends, string)).toBe(expected);
+  });
+});
+
+describe('가장 많이 받은 선물 - AI 코드 리뷰', () => {
+  test.each(DEFAULT_TEST_CASES)('기본 테스트 케이스 검증', ({ friends, string, expected }) => {
+    expect(solution_a(friends, string)).toBe(expected);
   });
 });
