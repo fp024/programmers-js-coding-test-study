@@ -9,7 +9,7 @@ function solution(s: string) {
     const prevSLength = s.length;
     const zeroClearedS = s.replace(/0/g, '');
     zeroCount += prevSLength - zeroClearedS.length;
-    s = parseInt('' + zeroClearedS.length).toString(2);
+    s = zeroClearedS.length.toString(2);
     loopCount++;
   }
 
