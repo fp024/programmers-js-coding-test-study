@@ -1,25 +1,20 @@
 /**
- * 올바른 괄호
+ * 올바른 괄호 - AI 가이드
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12909
  */
 function solution(s: string) {
-  const strArr: string[] = [...s];
-
   const stack: string[] = [];
 
-  for (let s of [...strArr]) {
-    if (s === '(') {
+  for (let char of s) {
+    if (char === '(') {
       stack.push('(');
-    } else if (s === ')') {
-      if (stack.length > 0 && stack[stack.length - 1] === '(') {
-        stack.pop();
-      } else {
-        stack.push(')');
+    } else if (char === ')') {
+      if (stack.length === 0) {
+        return false;
       }
+      stack.pop();
     }
   }
-
-  console.log(stack);
 
   return stack.length === 0;
 }
@@ -40,8 +35,9 @@ console.log(solution('(((('));
 
 // cspell:enable
 // === 문제 읽고 첫 느낌 ===
-//  주제가 스택/큐인데... 어떻게 풀어야하나.
-
+//  먼저 내가 먼저 풀은게 +1점으로 통과는 했지만 엉퉁하게 풀은 것 같아서, AI에게 가이드 받으니..
+//  짝이 없을 때.. 바로 실패로 간주하면 되는데... 괜히 닫는 괄호를 넣는 이상한 동작을 했었다. 😂
+//
 // === 다른 사람 풀이 확인 이후 의견 ===
 // ...
 //
