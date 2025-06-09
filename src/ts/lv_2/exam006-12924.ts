@@ -4,14 +4,14 @@
  */
 function solution(n: number) {
   let answer = 0;
+  let halfN = Math.trunc(n);
 
-  for (let i = 1; i <= n; i++) {
+  for (let i = 1; i <= halfN + 1; i++) {
     let sum = 0;
     for (let j = i; sum <= n; j++) {
       sum += j;
       if (sum === n) {
         answer++;
-        break;
       }
     }
   }
