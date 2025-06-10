@@ -20,7 +20,7 @@ const DEFAULT_TEST_CASES = [
 
 describe('숫자의 표현', () => {
   test.each(DEFAULT_TEST_CASES)('기본 테스트 케이스 검증', ({ n, expected }) => {
-    expect(solution(n)).toEqual(expected);
+    expect(solution(n)).toBe(expected);
   });
 });
 
