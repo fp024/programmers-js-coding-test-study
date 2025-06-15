@@ -99,9 +99,10 @@ function solution(line: number[][]) {
   const width = maxPoint.x - minPoint.x + 1;
   const height = maxPoint.y - minPoint.y + 1;
 
-  const arr: string[][] = Array(height)
-    .fill(null)
-    .map(() => Array(width).fill('.'));
+  const arr = Array.from(
+    { length: height }, //
+    () => Array.from({ length: width }, () => '.')
+  );
 
   // ✨ 배열에 별 표시
   for (const p of intersectionPoints) {
