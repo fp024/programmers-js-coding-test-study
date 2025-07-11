@@ -14,20 +14,9 @@
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
-  "jestrunner.jestCommand": "yarn jest",
-  "jestrunner.enableYarnPnpSupport": true,
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "jestrunner.debugOptions": {
-    "runtimeExecutable": "yarn",
-    "runtimeArgs": [
-      "jest",
-      "${fileBasename}",
-      "--runInBand",
-      "--no-cache",
-      "--watchAll=false",
-      "--color"
-    ]
-  },
+  "jestrunner.jestCommand": "yarn cross-env NODE_OPTIONS=\"--experimental-vm-modules --no-deprecation --disable-warning=ExperimentalWarning\" yarn jest",
+  "jestrunner.enableYarnPnpSupport": true,
   "code-runner.executorMap": {
     "javascript": "node",
     "typescript": "yarn cross-env NODE_OPTIONS=\"--no-deprecation --disable-warning=ExperimentalWarning\" yarn ts-node-esm" // 💡ts-node-esm 실행은 node v23 환경에서 정상 동작했다.

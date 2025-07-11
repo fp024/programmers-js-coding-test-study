@@ -7,8 +7,6 @@
     "node": ">=16.17.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.0",
-    "@babel/preset-env": "^7.28.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.0.10",
     "cross-env": "^7.0.3",
@@ -22,7 +20,7 @@
     "typescript": "^5.8.3"
   },
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "yarn cross-env NODE_OPTIONS=\"--experimental-vm-modules --disable-warning=ExperimentalWarning\" yarn jest --passWithNoTests",
     "format": "prettier --write \"./**/*.{js,ts,json,yml}\"",
     "ts-build": "tsc",
     "ts-clean": "rimraf dist",

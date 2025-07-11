@@ -5,7 +5,6 @@ const config = {
   testMatch: ['**/?(*.)+(spec|test).[jt]s'],
   testEnvironment: 'node',
   transform: {
-    '^.+\\.m?js$': 'babel-jest',
     '^.+\\.ts$': 'ts-jest',
   },
 };
