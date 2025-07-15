@@ -8,12 +8,14 @@ function solution(a, b, flag) {
 }
 
 // === 단순 실행 테스트 ===
-if (solution(-4, 7, true) !== 3) {
-  throw Error('Test Case 01 Failed.');
-}
+if (process.env.JEST_WORKER_ID === undefined) {
+  if (solution(-4, 7, true) !== 3) {
+    throw Error('Test Case 01 Failed.');
+  }
 
-if (solution(-4, 7, false) !== -11) {
-  throw Error('Test Case 02 Failed.');
+  if (solution(-4, 7, false) !== -11) {
+    throw Error('Test Case 02 Failed.');
+  }
 }
 
 // === 다른 사람 풀이 확인 이후 의견 ===

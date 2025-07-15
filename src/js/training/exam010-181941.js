@@ -10,4 +10,6 @@ function solution(arr) {
   return answer;
 }
 // 단순 실행 테스트
-console.log(solution(['a', 'b', 'c']) == 'abc');
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(['a', 'b', 'c']) == 'abc');
+}

@@ -28,8 +28,10 @@ function divisorCount(n: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(solution(5, 3, 2));
-console.log(solution(10, 3, 2));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(5, 3, 2));
+  console.log(solution(10, 3, 2));
+}
 // cspell:enable
 //
 // === 문제 읽고 첫 느낌 ===

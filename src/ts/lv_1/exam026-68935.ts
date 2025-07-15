@@ -28,15 +28,17 @@ function base3ToDecimal(n: BigInt) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution(45));
-console.log(solution(125));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(45));
+  console.log(solution(125));
 
-console.log(solution(1));
-console.log(solution(2));
-console.log(solution(3));
+  console.log(solution(1));
+  console.log(solution(2));
+  console.log(solution(3));
 
-console.log(solution(99_999_999));
-console.log(solution(100_000_000));
+  console.log(solution(99_999_999));
+  console.log(solution(100_000_000));
+}
 // === 문제 읽고 첫 느낌 ===
 //   입력된 수를 3진법으로 바꾸고 뒤집어서 다시 10진법으로 반환하는 문제인데,
 //   3진법으로 어떻게 바꿔야하나? 이렇게 2진법을 기준으로 바꿨던 것 같다.

@@ -12,16 +12,18 @@ function solution(array: number[], commands: number[][]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(
-  solution(
-    [1, 5, 2, 6, 3, 7, 4],
-    [
-      [2, 5, 3],
-      [4, 4, 1],
-      [1, 7, 3],
-    ]
-  )
-);
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(
+    solution(
+      [1, 5, 2, 6, 3, 7, 4],
+      [
+        [2, 5, 3],
+        [4, 4, 1],
+        [1, 7, 3],
+      ]
+    )
+  );
+}
 
 // === 문제 읽고 첫 느낌 ===
 //   왠지... 예전에 JS로 풀었던 것 같은...

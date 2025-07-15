@@ -53,9 +53,10 @@ function solution(survey: string[], choices: number[]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(solution(['AN', 'CF', 'MJ', 'RT', 'NA'], [5, 3, 2, 7, 5]));
-console.log(solution(['TR', 'RT', 'TR'], [7, 1, 3]));
-
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(['AN', 'CF', 'MJ', 'RT', 'NA'], [5, 3, 2, 7, 5]));
+  console.log(solution(['TR', 'RT', 'TR'], [7, 1, 3]));
+}
 // cspell:enable
 //
 // === 문제 읽고 첫 느낌 ===

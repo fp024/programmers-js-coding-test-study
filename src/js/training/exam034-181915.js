@@ -9,8 +9,10 @@ function solution(my_string, index_list) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution('cvsgiorszzzmrpaqpe', [16, 6, 5, 3, 12, 14, 11, 11, 17, 12, 7]));
-console.log(solution('zpiaz', [1, 2, 0, 0, 3]));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('cvsgiorszzzmrpaqpe', [16, 6, 5, 3, 12, 14, 11, 11, 17, 12, 7]));
+  console.log(solution('zpiaz', [1, 2, 0, 0, 3]));
+}
 
 export default solution;
 // === 문제 읽고 첫 느낌 ===

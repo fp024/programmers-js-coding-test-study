@@ -11,8 +11,10 @@ function solution(absolutes: number[], signs: boolean[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution([4, 7, 12], [true, false, true]));
-console.log(solution([1, 2, 3], [false, false, true]));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution([4, 7, 12], [true, false, true]));
+  console.log(solution([1, 2, 3], [false, false, true]));
+}
 
 // === 문제 읽고 첫 느낌 ===
 // ...

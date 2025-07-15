@@ -7,7 +7,9 @@ function solution(n) {
   console.log(msg);
 }
 
-solution(0);
-solution(1);
-solution(2);
-solution(3);
+if (process.env.JEST_WORKER_ID === undefined) {
+  solution(0);
+  solution(1);
+  solution(2);
+  solution(3);
+}

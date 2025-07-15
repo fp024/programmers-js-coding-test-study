@@ -20,8 +20,10 @@ function solution(k: number, m: number, score: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(solution(3, 4, [1, 2, 3, 1, 2, 3, 1]));
-console.log(solution(4, 3, [4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2]));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(3, 4, [1, 2, 3, 1, 2, 3, 1]));
+  console.log(solution(4, 3, [4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2]));
+}
 // cspell:enable
 //
 // === 문제 읽고 첫 느낌 ===

@@ -79,48 +79,50 @@ function initializeCounters(friends: string[]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(
-  solution(
-    ['muzi', 'ryan', 'frodo', 'neo'], //
-    [
-      'muzi frodo',
-      'muzi frodo',
-      'ryan muzi',
-      'ryan muzi',
-      'ryan muzi',
-      'frodo muzi',
-      'frodo ryan',
-      'neo muzi',
-    ]
-  )
-);
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(
+    solution(
+      ['muzi', 'ryan', 'frodo', 'neo'], //
+      [
+        'muzi frodo',
+        'muzi frodo',
+        'ryan muzi',
+        'ryan muzi',
+        'ryan muzi',
+        'frodo muzi',
+        'frodo ryan',
+        'neo muzi',
+      ]
+    )
+  );
 
-console.log(
-  solution(
-    ['joy', 'brad', 'alessandro', 'conan', 'david'], //
-    [
-      'alessandro brad',
-      'alessandro joy',
-      'alessandro conan',
-      'david alessandro',
-      'alessandro david',
-    ]
-  )
-);
+  console.log(
+    solution(
+      ['joy', 'brad', 'alessandro', 'conan', 'david'], //
+      [
+        'alessandro brad',
+        'alessandro joy',
+        'alessandro conan',
+        'david alessandro',
+        'alessandro david',
+      ]
+    )
+  );
 
-console.log(
-  solution(
-    ['a', 'b', 'c'], //
-    [
-      'a b', //
-      'b a',
-      'c a',
-      'a c',
-      'a c',
-      'c a',
-    ]
-  )
-);
+  console.log(
+    solution(
+      ['a', 'b', 'c'], //
+      [
+        'a b', //
+        'b a',
+        'c a',
+        'a c',
+        'a c',
+        'c a',
+      ]
+    )
+  );
+}
 
 // cspell:enable
 // === 문제 읽고 첫 느낌 ===

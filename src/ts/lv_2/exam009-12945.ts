@@ -18,9 +18,11 @@ function fibonacci(n: number): number {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(solution(3));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(3));
 
-console.log(solution(5));
+  console.log(solution(5));
+}
 
 // cspell:enable
 // === 문제 읽고 첫 느낌 ===

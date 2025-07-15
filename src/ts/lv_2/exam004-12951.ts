@@ -17,9 +17,11 @@ function solution(s: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(solution('3people unFollowed me'));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('3people unFollowed me'));
 
-console.log(solution('for the last week'));
+  console.log(solution('for the last week'));
+}
 
 // cspell:enable
 // === 문제 읽고 첫 느낌 ===

@@ -9,9 +9,11 @@ function solution(nums: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(solution([3, 1, 2, 3]));
-console.log(solution([3, 3, 3, 2, 2, 4]));
-console.log(solution([3, 3, 3, 2, 2, 2]));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution([3, 1, 2, 3]));
+  console.log(solution([3, 3, 3, 2, 2, 4]));
+  console.log(solution([3, 3, 3, 2, 2, 2]));
+}
 // cspell:enable
 //
 // === 문제 읽고 첫 느낌 ===

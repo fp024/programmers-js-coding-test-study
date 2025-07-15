@@ -16,10 +16,12 @@ function solution(k: number, score: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution(3, [10, 100, 20, 150, 1, 100, 200]));
-console.log(solution(4, [0, 300, 40, 300, 20, 70, 150, 50, 500, 1000]));
-// 추가 테스트
-console.log(solution(3, [100, 30, 40, 150, 300, 200, 200]));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(3, [10, 100, 20, 150, 1, 100, 200]));
+  console.log(solution(4, [0, 300, 40, 300, 20, 70, 150, 50, 500, 1000]));
+  // 추가 테스트
+  console.log(solution(3, [100, 30, 40, 150, 300, 200, 200]));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //    splice(k)를 활용

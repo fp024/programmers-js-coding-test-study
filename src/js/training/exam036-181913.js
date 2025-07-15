@@ -18,14 +18,16 @@ function solution(my_string, queries) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(
-  solution('rermgorpsam', [
-    [2, 3],
-    [0, 7],
-    [5, 9],
-    [6, 10],
-  ])
-);
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(
+    solution('rermgorpsam', [
+      [2, 3],
+      [0, 7],
+      [5, 9],
+      [6, 10],
+    ])
+  );
+}
 
 export default solution;
 // === 문제 읽고 첫 느낌 ===

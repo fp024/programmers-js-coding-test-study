@@ -16,9 +16,11 @@ function solution(t: string, p: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution('3141592', '271'));
-console.log(solution('500220839878', '7'));
-console.log(solution('10203', '15'));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('3141592', '271'));
+  console.log(solution('500220839878', '7'));
+  console.log(solution('10203', '15'));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //   p의 길이만큼 t를 잘 쪼개는게 중요한 것 같다.

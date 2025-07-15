@@ -23,4 +23,6 @@ function solution(str) {
 }
 
 // 검증
-console.log(solution('aBcDeFg') === 'AbCdEfG'); // NOSONAR
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('aBcDeFg') === 'AbCdEfG'); // NOSONAR
+}

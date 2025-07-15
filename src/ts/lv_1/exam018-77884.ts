@@ -18,8 +18,10 @@ function isPerfectSquare(n: number): boolean {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution(13, 17));
-console.log(solution(24, 27));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(13, 17));
+  console.log(solution(24, 27));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //   약수가 나오면... 그냥 N이라는 수를 1부터 ~ N까지 나눠서 0으로 나누어 떨어지는 수 들을 구해야겠다는 생각이 드는데...

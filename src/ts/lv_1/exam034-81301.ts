@@ -49,10 +49,12 @@ function solution(s: string) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution('one4seveneight'));
-console.log(solution('23four5six7'));
-console.log(solution('2three45sixseven'));
-console.log(solution('123'));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('one4seveneight'));
+  console.log(solution('23four5six7'));
+  console.log(solution('2three45sixseven'));
+  console.log(solution('123'));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //   쉽게 풀릴 줄 알았는데, 뭔가 어렵네... 😂

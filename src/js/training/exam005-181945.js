@@ -6,4 +6,6 @@ function solution(str) {
   str.split('').forEach((c) => console.log(c));
 }
 
-solution('abcde');
+if (process.env.JEST_WORKER_ID === undefined) {
+  solution('abcde');
+}

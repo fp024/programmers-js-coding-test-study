@@ -11,8 +11,10 @@ function solution(a: number[], b: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution([1, 2, 3, 4], [-3, -1, 0, 2]));
-console.log(solution([-1, 0, 1], [1, 0, -1]));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution([1, 2, 3, 4], [-3, -1, 0, 2]));
+  console.log(solution([-1, 0, 1], [1, 0, -1]));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //    내적이 뭔지는 잘 모르겠지만, 예제에 계산 예제가 있어서 그거 그대로 코드에 대입하면 풀 수 있긴하겠다. 😅

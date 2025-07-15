@@ -27,9 +27,11 @@ function solution(s: string, n: number) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution('AB', 1));
-console.log(solution('z', 1));
-console.log(solution('a B z', 4));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('AB', 1));
+  console.log(solution('z', 1));
+  console.log(solution('a B z', 4));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //   일단 생각 나는대로 풀었다. 😅

@@ -20,8 +20,10 @@ function solution(s: string) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution('pPoooyY'));
-console.log(solution('Pyy'));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('pPoooyY'));
+  console.log(solution('Pyy'));
+}
 
 // === 문제 읽고 첫 느낌 ===
 // ...

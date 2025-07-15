@@ -31,12 +31,14 @@ function isDigit(char) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (solution('abc1abc1abc') !== 'acbac') {
-  throw Error('Test Case 01 Failed.');
-}
+if (process.env.JEST_WORKER_ID === undefined) {
+  if (solution('abc1abc1abc') !== 'acbac') {
+    throw Error('Test Case 01 Failed.');
+  }
 
-if (solution('1abc') !== 'ac') {
-  throw Error('Test Case 02 Failed.');
+  if (solution('1abc') !== 'ac') {
+    throw Error('Test Case 02 Failed.');
+  }
 }
 
 export default solution;

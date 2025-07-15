@@ -20,9 +20,11 @@ function solution(d: number[], budget: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution([1, 3, 2, 5, 4], 9));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution([1, 3, 2, 5, 4], 9));
 
-console.log(solution([2, 2, 3, 3], 10));
+  console.log(solution([2, 2, 3, 3], 10));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //   이번은 뭔가 머리를 써야되는 문제같다.

@@ -12,8 +12,10 @@ function solution(s: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution('a1234'));
-console.log(solution('1234'));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('a1234'));
+  console.log(solution('1234'));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //   갑자기... 문자열을 숫자로 어떻게 확인하지? 해깔렸는데,

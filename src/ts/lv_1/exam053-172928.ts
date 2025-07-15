@@ -95,51 +95,53 @@ function solution(park: string[], routes: string[]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(
-  solution(
-    [
-      'SOO', //
-      'OOO',
-      'OOO',
-    ],
-    [
-      'E 2', //
-      'S 2',
-      'W 1',
-    ]
-  )
-);
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(
+    solution(
+      [
+        'SOO', //
+        'OOO',
+        'OOO',
+      ],
+      [
+        'E 2', //
+        'S 2',
+        'W 1',
+      ]
+    )
+  );
 
-console.log(
-  solution(
-    [
-      'SOO', //
-      'OXX',
-      'OOO',
-    ],
-    [
-      'E 2', //
-      'S 2',
-      'W 1',
-    ]
-  )
-);
+  console.log(
+    solution(
+      [
+        'SOO', //
+        'OXX',
+        'OOO',
+      ],
+      [
+        'E 2', //
+        'S 2',
+        'W 1',
+      ]
+    )
+  );
 
-console.log(
-  solution(
-    [
-      'OSO', //
-      'OOO',
-      'OXO',
-      'OOO',
-    ],
-    [
-      'E 2', //
-      'S 3',
-      'W 1',
-    ]
-  )
-);
+  console.log(
+    solution(
+      [
+        'OSO', //
+        'OOO',
+        'OXO',
+        'OOO',
+      ],
+      [
+        'E 2', //
+        'S 3',
+        'W 1',
+      ]
+    )
+  );
+}
 
 // cspell:enable
 // === 문제 읽고 첫 느낌 ===

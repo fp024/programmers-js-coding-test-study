@@ -13,9 +13,11 @@ function solution(price: number, money: number, count: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution(3, 20, 4));
-console.log(solution(3, 30, 4));
-console.log(solution(3, 31, 4));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(3, 20, 4));
+  console.log(solution(3, 30, 4));
+  console.log(solution(3, 31, 4));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //   테스트 케이스 4번이 왜 틀리는지 모르겠다. 😂, 갑자기 서버 점검중인 것 같음.. 04:00이 점검시간인가?

@@ -20,7 +20,9 @@ function solution(s: string) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution('try hello world'));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('try hello world'));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //   이번 문제는 그럭저럭 잘 풀었나보다, +3점 나왔다. 문자열 쪼개지 않고 charAt() 사용해서 그런 것 같긴함.

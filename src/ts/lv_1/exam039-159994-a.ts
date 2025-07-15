@@ -20,13 +20,15 @@ function solution(cards1: string[], cards2: string[], goal: string[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(
-  solution(['i', 'drink', 'water'], ['want', 'to'], ['i', 'want', 'to', 'drink', 'water'])
-);
-console.log(
-  solution(['i', 'water', 'drink'], ['want', 'to'], ['i', 'want', 'to', 'drink', 'water'])
-);
-console.log(solution(['a', 'b', 'c'], ['d', 'e', 'f'], ['a', 'd', 'f']));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(
+    solution(['i', 'drink', 'water'], ['want', 'to'], ['i', 'want', 'to', 'drink', 'water'])
+  );
+  console.log(
+    solution(['i', 'water', 'drink'], ['want', 'to'], ['i', 'want', 'to', 'drink', 'water'])
+  );
+  console.log(solution(['a', 'b', 'c'], ['d', 'e', 'f'], ['a', 'd', 'f']));
+}
 
 //
 // === 문제 읽고 첫 느낌 ===

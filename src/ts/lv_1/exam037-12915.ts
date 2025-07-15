@@ -10,8 +10,10 @@ function solution(strings: string[], n: number) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution(['sun', 'bed', 'car'], 1));
-console.log(solution(['abce', 'abcd', 'cdx'], 2));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(['sun', 'bed', 'car'], 1));
+  console.log(solution(['abce', 'abcd', 'cdx'], 2));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //   sort에 비교함수를 적당히 넣으면 될 것 같았는데.. 쉽게 잘되었다.

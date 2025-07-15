@@ -20,7 +20,9 @@ function descSortThanJoin(s: string, filterOp: (s: string) => boolean) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution('Zbcdefg'));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('Zbcdefg'));
+}
 
 // === 문제 읽고 첫 느낌 ===
 // ...

@@ -19,9 +19,11 @@ function solution(s: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(solution('baabaa'));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('baabaa'));
 
-console.log(solution('cdcd'));
+  console.log(solution('cdcd'));
+}
 
 // cspell:enable
 // === 문제 읽고 첫 느낌 ===

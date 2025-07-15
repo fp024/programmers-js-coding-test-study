@@ -44,53 +44,55 @@ function solution(bandage: number[], health: number, attacks: number[][]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(
-  solution(
-    [5, 1, 5], //
-    30,
-    [
-      [2, 10],
-      [9, 15],
-      [10, 5],
-      [11, 5],
-    ]
-  )
-);
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(
+    solution(
+      [5, 1, 5], //
+      30,
+      [
+        [2, 10],
+        [9, 15],
+        [10, 5],
+        [11, 5],
+      ]
+    )
+  );
 
-console.log(
-  solution(
-    [3, 2, 7], //
-    20,
-    [
-      [1, 15],
-      [5, 16],
-      [8, 6],
-    ]
-  )
-);
+  console.log(
+    solution(
+      [3, 2, 7], //
+      20,
+      [
+        [1, 15],
+        [5, 16],
+        [8, 6],
+      ]
+    )
+  );
 
-console.log(
-  solution(
-    [4, 2, 7], //
-    20,
-    [
-      [1, 15],
-      [5, 16],
-      [8, 6],
-    ]
-  )
-);
+  console.log(
+    solution(
+      [4, 2, 7], //
+      20,
+      [
+        [1, 15],
+        [5, 16],
+        [8, 6],
+      ]
+    )
+  );
 
-console.log(
-  solution(
-    [1, 1, 1], //
-    5,
-    [
-      [1, 2],
-      [3, 2],
-    ]
-  )
-);
+  console.log(
+    solution(
+      [1, 1, 1], //
+      5,
+      [
+        [1, 2],
+        [3, 2],
+      ]
+    )
+  );
+}
 // cspell:enable
 // === 문제 읽고 첫 느낌 ===
 // ...

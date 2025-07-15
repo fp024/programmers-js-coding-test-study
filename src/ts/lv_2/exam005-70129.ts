@@ -18,11 +18,13 @@ function solution(s: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(solution('110010101001'));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('110010101001'));
 
-console.log(solution('01110'));
+  console.log(solution('01110'));
 
-console.log(solution('1111111'));
+  console.log(solution('1111111'));
+}
 
 // cspell:enable
 // === 문제 읽고 첫 느낌 ===

@@ -14,12 +14,14 @@ function solution(a, b) {
 }
 
 // === 단순 실행 테스트 ===
-if (solution(2, 91) !== 364) {
-  throw Error('Test Case 01 Failed.');
-}
+if (process.env.JEST_WORKER_ID === undefined) {
+  if (solution(2, 91) !== 364) {
+    throw Error('Test Case 01 Failed.');
+  }
 
-if (solution(91, 2) !== 912) {
-  throw Error('Test Case 02 Failed.');
+  if (solution(91, 2) !== 912) {
+    throw Error('Test Case 02 Failed.');
+  }
 }
 
 // === 다른 사람 풀이 확인 이후 의견 ===

@@ -16,10 +16,12 @@ function solution(x: number) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution(10));
-console.log(solution(12));
-console.log(solution(11));
-console.log(solution(13));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(10));
+  console.log(solution(12));
+  console.log(solution(11));
+  console.log(solution(13));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //   WebStorm에서 켜봤는데, 꽤 할만하다.

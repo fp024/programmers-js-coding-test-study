@@ -25,10 +25,12 @@ function solution(s: string) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution('banana'));
-console.log(solution('foobar'));
-console.log(solution('aaa'));
-console.log(solution('abc'));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('banana'));
+  console.log(solution('foobar'));
+  console.log(solution('aaa'));
+  console.log(solution('abc'));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //   뭔가 바로 안풀린다...😂

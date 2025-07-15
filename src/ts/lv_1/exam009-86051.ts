@@ -19,8 +19,10 @@ function solution(absolutes: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution([1, 2, 3, 4, 6, 7, 8, 0]));
-console.log(solution([5, 8, 4, 0, 6, 7, 9]));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution([1, 2, 3, 4, 6, 7, 8, 0]));
+  console.log(solution([5, 8, 4, 0, 6, 7, 9]));
+}
 
 // === 문제 읽고 첫 느낌 ===
 // ...

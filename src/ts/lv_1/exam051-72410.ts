@@ -46,11 +46,13 @@ function solution(new_id: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(solution('...!@BaT#*..y.abcdefghijklm'));
-console.log(solution('z-+.^.'));
-console.log(solution('=.='));
-console.log(solution('123_.def'));
-console.log(solution('abcdefghijklmn.p'));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('...!@BaT#*..y.abcdefghijklm'));
+  console.log(solution('z-+.^.'));
+  console.log(solution('=.='));
+  console.log(solution('123_.def'));
+  console.log(solution('abcdefghijklmn.p'));
+}
 
 // cspell:enable
 //

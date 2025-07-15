@@ -17,10 +17,12 @@ function solution(s: string) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution('abcde'));
-console.log(solution('qwer'));
-console.log(solution('1'));
-console.log(solution('12'));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution('abcde'));
+  console.log(solution('qwer'));
+  console.log(solution('1'));
+  console.log(solution('12'));
+}
 
 // === 문제 읽고 첫 느낌 ===
 // ...

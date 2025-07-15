@@ -16,8 +16,10 @@ function solution(arr: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution([4, 3, 2, 1]));
-console.log(solution([10]));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution([4, 3, 2, 1]));
+  console.log(solution([10]));
+}
 
 // === 문제 읽고 첫 느낌 ===
 //    기본 sort()로 별도 정렬해서 최소값 구한다음 하면 되긴할 텐데...,

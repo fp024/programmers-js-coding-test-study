@@ -22,9 +22,11 @@ function solution(n: number, m: number, section: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-console.log(solution(8, 4, [2, 3, 6]));
-console.log(solution(5, 4, [1, 3]));
-console.log(solution(4, 1, [1, 2, 3, 4]));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(8, 4, [2, 3, 6]));
+  console.log(solution(5, 4, [1, 3]));
+  console.log(solution(4, 1, [1, 2, 3, 4]));
+}
 // cspell:enable
 //
 // === 문제 읽고 첫 느낌 ===

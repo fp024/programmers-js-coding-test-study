@@ -45,11 +45,13 @@ function solution(a, b, c, d) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-console.log(solution(2, 2, 2, 2));
-console.log(solution(4, 1, 4, 4));
-console.log(solution(6, 3, 3, 6));
-console.log(solution(2, 5, 2, 6));
-console.log(solution(6, 4, 2, 5));
+if (process.env.JEST_WORKER_ID === undefined) {
+  console.log(solution(2, 2, 2, 2));
+  console.log(solution(4, 1, 4, 4));
+  console.log(solution(6, 3, 3, 6));
+  console.log(solution(2, 5, 2, 6));
+  console.log(solution(6, 4, 2, 5));
+}
 
 export default solution;
 // === 문제 읽고 첫 느낌 ===
