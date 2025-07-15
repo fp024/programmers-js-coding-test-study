@@ -49,7 +49,7 @@ function solution(dirs: string) {
   let p: Point = { x: 0, y: 0 };
   /** 이미 방문했던 좌표인지 체크용도의 Set */
   const moveSet = new Set<string>();
-  let moveCount = 0;
+  let uniqueMoveCount = 0;
 
   for (let dir of dirs) {
     const dirPoint = commandDirs[dir];
@@ -62,7 +62,7 @@ function solution(dirs: string) {
       !moveSet.has(getPathId({ prev: p, next: newPoint })) &&
       !moveSet.has(getPathId({ prev: newPoint, next: p }))
     ) {
-      moveCount++;
+      uniqueMoveCount++;
       moveSet.add(getPathId({ prev: p, next: newPoint }));
       moveSet.add(getPathId({ prev: newPoint, next: p }));
     }
@@ -70,7 +70,7 @@ function solution(dirs: string) {
     p = newPoint;
   }
 
-  return moveCount;
+  return uniqueMoveCount;
 }
 
 // === 단순 실행 테스트 ===
