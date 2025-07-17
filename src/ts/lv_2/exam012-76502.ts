@@ -40,7 +40,7 @@ function isValidBrackets(brackets: string[]) {
     }
   }
 
-  return stack.length == 0;
+  return stack.length === 0;
 }
 
 /** 문제 해결 함수 */
