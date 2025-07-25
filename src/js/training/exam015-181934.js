@@ -21,7 +21,7 @@ function solution(ineq, eq, n, m) {
 }
 
 // === 단순 실행 테스트 ===
-if (process.env.JEST_WORKER_ID === undefined) {
+if (process.env.VITEST_WORKER_ID === undefined) {
   if (solution('<', '=', 20, 50) !== 1) {
     throw Error('Test Case 01 Failed.');
   }

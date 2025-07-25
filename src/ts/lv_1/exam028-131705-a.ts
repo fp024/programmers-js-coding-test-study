@@ -20,7 +20,7 @@ function solution(number: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.JEST_WORKER_ID === undefined) {
+if (process.env.VITEST_WORKER_ID === undefined) {
   console.log(solution([-2, 3, 0, 2, -5]));
   console.log(solution([-3, -2, -1, 0, 1, 2, 3]));
   console.log(solution([-1, 1, -1, 1]));

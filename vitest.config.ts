@@ -12,9 +12,6 @@ export default defineConfig({
     // Jest처럼 import 없이 사용하려면 true로 설정
     globals: false,
 
-    // 테스트 병렬 실행 (기본: forks, 더 빠른 테스트)
-    pool: 'threads',
-
     // 파일 변경 시 자동 재실행 (watch 모드에서)
     watch: false,
 

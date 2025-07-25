@@ -122,7 +122,7 @@ function solution(line: number[][]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.JEST_WORKER_ID === undefined) {
+if (process.env.VITEST_WORKER_ID === undefined) {
   console.log(
     solution([
       [2, -1, 4],

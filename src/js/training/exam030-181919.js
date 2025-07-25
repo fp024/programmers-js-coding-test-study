@@ -20,7 +20,7 @@ function solution(n) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.JEST_WORKER_ID === undefined) {
+if (process.env.VITEST_WORKER_ID === undefined) {
   console.log(solution(10));
 }
 

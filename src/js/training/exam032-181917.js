@@ -9,7 +9,7 @@ function solution(x1, x2, x3, x4) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.JEST_WORKER_ID === undefined) {
+if (process.env.VITEST_WORKER_ID === undefined) {
   console.log(solution(false, true, true, true));
 }
 

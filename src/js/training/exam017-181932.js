@@ -31,7 +31,7 @@ function isDigit(char) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.JEST_WORKER_ID === undefined) {
+if (process.env.VITEST_WORKER_ID === undefined) {
   if (solution('abc1abc1abc') !== 'acbac') {
     throw Error('Test Case 01 Failed.');
   }

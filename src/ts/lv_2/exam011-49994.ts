@@ -75,7 +75,7 @@ function solution(dirs: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.JEST_WORKER_ID === undefined) {
+if (process.env.VITEST_WORKER_ID === undefined) {
   console.log(solution('ULURRDLLU'));
 
   console.log(solution('LULLLLLLU'));

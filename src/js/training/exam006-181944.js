@@ -7,7 +7,7 @@ function solution(n) {
   console.log(msg);
 }
 
-if (process.env.JEST_WORKER_ID === undefined) {
+if (process.env.VITEST_WORKER_ID === undefined) {
   solution(0);
   solution(1);
   solution(2);

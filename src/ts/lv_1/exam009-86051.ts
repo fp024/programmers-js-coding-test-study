@@ -19,7 +19,7 @@ function solution(absolutes: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.JEST_WORKER_ID === undefined) {
+if (process.env.VITEST_WORKER_ID === undefined) {
   console.log(solution([1, 2, 3, 4, 6, 7, 8, 0]));
   console.log(solution([5, 8, 4, 0, 6, 7, 9]));
 }

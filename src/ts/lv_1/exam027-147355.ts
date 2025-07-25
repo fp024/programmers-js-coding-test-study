@@ -16,7 +16,7 @@ function solution(t: string, p: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.JEST_WORKER_ID === undefined) {
+if (process.env.VITEST_WORKER_ID === undefined) {
   console.log(solution('3141592', '271'));
   console.log(solution('500220839878', '7'));
   console.log(solution('10203', '15'));

@@ -11,7 +11,7 @@ function solution(num, n) {
 }
 
 // === 단순 실행 테스트 ===
-if (process.env.JEST_WORKER_ID === undefined) {
+if (process.env.VITEST_WORKER_ID === undefined) {
   if (solution(98, 2) !== 1) {
     throw Error('Test Case 01 Failed.');
   }

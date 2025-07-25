@@ -6,6 +6,6 @@ function solution(str) {
   str.split('').forEach((c) => console.log(c));
 }
 
-if (process.env.JEST_WORKER_ID === undefined) {
+if (process.env.VITEST_WORKER_ID === undefined) {
   solution('abcde');
 }
