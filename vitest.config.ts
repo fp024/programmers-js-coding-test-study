@@ -12,6 +12,12 @@ export default defineConfig({
     // Jest처럼 import 없이 사용하려면 true로 설정
     globals: false,
 
+    // 테스트 병렬 실행 (기본: forks, 더 빠른 테스트)
+    pool: 'threads',
+
+    // 파일 변경 시 자동 재실행 (watch 모드에서)
+    watch: false,
+
     // TypeScript 지원 (ts-jest 대신 Vite가 처리)
     // 별도 설정 불필요, tsconfig.json을 자동으로 참조
   },
