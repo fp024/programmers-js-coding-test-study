@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam007-12947';
 
 describe('하샤드 수 판별기', () => {

@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam020-82612';
 
 describe('부족한 금액 계산하기', () => {

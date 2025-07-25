@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam022-12950';
 
 describe('행렬의 덧셈', () => {

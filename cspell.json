@@ -10,9 +10,7 @@
     "/pnp.loader.mjs",
     "tsconfig.json"
   ],
-  "words": [
-    "trunc"
-  ],
+  "words": [],
   "ignoreWords": [
     "ababababab",
     "acbac",
@@ -63,7 +61,10 @@
     "Poooy",
     "seveneight",
     "sixseven",
-    "nums"
+    "nums",
+    "gfedcb",
+    "trunc",
+    "Zbcdefg"
   ],
   "import": []
 }

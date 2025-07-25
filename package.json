@@ -7,20 +7,16 @@
     "node": ">=16.17.0"
   },
   "devDependencies": {
-    "@types/jest": "^30.0.0",
-    "@types/node": "^24.0.14",
-    "cross-env": "^7.0.3",
-    "jest": "^30.0.4",
-    "jest-util": "^30.0.2",
+    "@types/node": "^24.1.0",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
-    "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
     "tslib": "^2.8.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   },
   "scripts": {
-    "test": "yarn cross-env NODE_OPTIONS=\"--experimental-vm-modules --disable-warning=ExperimentalWarning\" yarn jest --passWithNoTests",
+    "test": "vitest",
     "format": "prettier --write \"./**/*.{js,ts,json,yml}\"",
     "ts-build": "tsc",
     "ts-clean": "rimraf dist",

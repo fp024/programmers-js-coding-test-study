@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam037-12915';
 
 describe('문자열 내 마음대로 정렬하기', () => {

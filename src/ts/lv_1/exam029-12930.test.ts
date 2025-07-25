@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam029-12930';
 
 describe('이상한 문자 만들기', () => {

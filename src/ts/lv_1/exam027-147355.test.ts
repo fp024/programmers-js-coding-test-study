@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam027-147355';
 
 describe('크기가 작은 부분문자열', () => {

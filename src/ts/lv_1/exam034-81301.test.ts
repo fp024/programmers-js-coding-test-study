@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam034-81301';
 
 describe('숫자 문자열과 영단어', () => {

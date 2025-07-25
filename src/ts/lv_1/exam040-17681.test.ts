@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam040-17681';
 
 const DEFAULT_TEST_CASES = [

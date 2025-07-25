@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam031-142086';
 
 describe('가장 가까운 글자', () => {

@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam021-12918';
 
 describe('문자열 다루기 기본', () => {

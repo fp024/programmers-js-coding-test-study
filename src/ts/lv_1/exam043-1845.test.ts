@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam043-1845';
 
 // cspell:disable

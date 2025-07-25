@@ -14,9 +14,6 @@
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
-  "terminal.integrated.defaultProfile.windows": "Command Prompt", // 💡jest runner 실행시 Git-Bash와는 호환이 안된다.
-  "jestrunner.jestCommand": "yarn cross-env NODE_OPTIONS=\"--experimental-vm-modules --no-deprecation --disable-warning=ExperimentalWarning\" yarn jest",
-  "jestrunner.enableYarnPnpSupport": true,
   "code-runner.executorMap": {
     "javascript": "node",
     "typescript": "yarn cross-env NODE_OPTIONS=\"--no-deprecation --disable-warning=ExperimentalWarning\" yarn ts-node-esm" // 💡ts-node-esm 실행은 node v23 환경에서 정상 동작했다.

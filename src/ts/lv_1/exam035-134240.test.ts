@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam035-134240';
 
 describe('푸드 파이트 대회', () => {

@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam032-12926';
 
 describe('시저 암호', () => {

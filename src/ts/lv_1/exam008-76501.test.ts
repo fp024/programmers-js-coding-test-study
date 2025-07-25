@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam008-76501';
 
 describe('음양 더하기', () => {

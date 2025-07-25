@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam028-181921.js';
 
 describe('solution', () => {

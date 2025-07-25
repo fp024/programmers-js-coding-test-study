@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam018-77884';
 
 describe('약수의 개수와 덧셈', () => {

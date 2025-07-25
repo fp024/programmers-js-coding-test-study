@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam019-12917';
 
 describe('문자열 내림차순으로 배치하기', () => {

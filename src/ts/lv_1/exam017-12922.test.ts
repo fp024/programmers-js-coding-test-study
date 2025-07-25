@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam017-12922';
 
 describe('수박수박수박수박수박수?', () => {

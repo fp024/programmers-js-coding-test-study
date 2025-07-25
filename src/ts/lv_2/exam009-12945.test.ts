@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam009-12945';
 import solution_a from './exam009-12945-a';
 

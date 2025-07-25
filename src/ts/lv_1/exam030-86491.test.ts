@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import solution from './exam030-86491';
 
 describe('최소직사각형', () => {
