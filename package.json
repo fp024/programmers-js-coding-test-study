@@ -1,8 +1,8 @@
 {
   "name": "programmers-js-coding-test-study",
-  "packageManager": "yarn@4.9.2",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.13.1",
   "engines": {
     "node": ">=16.17.0"
   },
@@ -17,10 +17,11 @@
     "vitest": "^3.2.4"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "test": "vitest",
     "format": "prettier --write \"./**/*.{js,ts,json,yml}\"",
     "ts-build": "tsc",
     "ts-clean": "rimraf dist",
-    "ts-watch": "yarn ts-clean && tsc --watch"
+    "ts-watch": "pnpm ts-clean && tsc --watch"
   }
 }

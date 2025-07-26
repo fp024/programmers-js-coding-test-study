@@ -7,16 +7,10 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "search.exclude": {
-    "**/.yarn": true,
-    "**/.pnp.*": true
-  },
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "code-runner.executorMap": {
     "javascript": "node",
-    "typescript": "yarn cross-env NODE_OPTIONS=\"--no-deprecation --disable-warning=ExperimentalWarning\" yarn ts-node-esm" // 💡ts-node-esm 실행은 node v23 환경에서 정상 동작했다.
+    "typescript": "pnpm cross-env NODE_OPTIONS=\"--no-deprecation --disable-warning=ExperimentalWarning\" pnpm ts-node-esm" // 💡ts-node-esm 실행은 node v23 환경에서 정상 동작했다.
   },
   "code-runner.clearPreviousOutput": true
 }

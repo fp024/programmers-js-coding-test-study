@@ -2,9 +2,45 @@
 
 
 
+## 💡2025-07-26 : Yarn 에서 pnpm로 패키지 매니저 변경
+
+> Yarn 에서 pnpm로 변경으로 인해 이전 내용 이력 보관 
+
+
+
+### 스터디 프로젝트  구성 (Yarn)
+
+Yarn 프로젝트이고, Prettier 설정을 위해 다음 설정을 하였었는데, 이후에 TypeScript도 사용하게 되었다.
+
+* [Editor SDKs | Yarn](https://yarnpkg.com/getting-started/editor-sdks)
+
+* TypeScript 관련 라이브러리가 버전없되었을 때, 다음 명령을 실행해주자!
+
+  ```sh
+  yarn dlx @yarnpkg/sdks vscode
+  ```
+
+
+
+### 프로젝트 초기화
+
+* yarn을 사용하므로 node를 다시 설치했을 경우 다음 명령을 실행해주자!
+
+  ```sh
+  corepack enable
+  ```
+
+* 프로젝트 디펜던시 설치
+
+  ```sh
+  yarn install
+  ```
+
+
+
 ---
 
-## 2025-07-25
+## 💡2025-07-25 : Jest 에서 Vitest로 변경
 
 > Jest에서 vitest로 바꿔서 다음 내용은 이제 유효하진 않지만, 이력용으로 남긴다.
 

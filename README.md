@@ -4,26 +4,17 @@
 >
 > 너무 막이는 문제를 만나면 일단 그냥 넘어가자! 😅
 >
-> JavaScript 언어를 사용해서 프로그래머스의 코딩 테스트 문제를 풀어보고, Jest로 테스트하자 👍
+> JavaScript 언어를 사용해서 프로그래머스의 코딩 테스트 문제를 풀어보고, Vitest로 테스트하자 👍
 
 
 
 ### 스터디 프로젝트  구성
 
-Yarn 프로젝트이고, Prettier 설정을 위해 다음 설정을 하였었는데, 이후에 TypeScript도 사용하게 되었다.
-
-* [Editor SDKs | Yarn](https://yarnpkg.com/getting-started/editor-sdks)
-
-* TypeScript 관련 라이브러리가 버전없되었을 때, 다음 명령을 실행해주자!
-  ```sh
-  yarn dlx @yarnpkg/sdks vscode
-  ```
-
-
+**pnpm** 프로젝트이고, Prettier 설정을 위해 다음 설정을 하였었는데, 이후에 TypeScript도 사용하게 되었다.
 
 ### 프로젝트 초기화
 
-* yarn을 사용하므로 node를 다시 설치했을 경우 다음 명령을 실행해주자!
+* pnpm을 사용하므로 node를 다시 설치했을 경우 다음 명령을 실행해주자!
 
   ```sh
   corepack enable
@@ -32,7 +23,7 @@ Yarn 프로젝트이고, Prettier 설정을 위해 다음 설정을 하였었는
 * 프로젝트 디펜던시 설치
 
   ```sh
-  yarn install
+  pnpm install
   ```
 
 
