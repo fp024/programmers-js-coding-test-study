@@ -10,7 +10,7 @@
 
 ### 스터디 프로젝트  구성
 
-**pnpm** 프로젝트이고, Prettier 설정을 위해 다음 설정을 하였었는데, 이후에 TypeScript도 사용하게 되었다.
+**pnpm** 프로젝트이고, 처음에는 JS로만 진행하다가 이후에는 TypeScript도 사용하게 되었다.
 
 ### 프로젝트 초기화
 
@@ -35,7 +35,7 @@
 * 전체 테스트 실행
 
   ```sh
-  yarn test
+  pnpm test
   ```
 
 * 개별 테스트
@@ -49,4 +49,5 @@
   * 코드와 입출력 값이 너무 단순할 때는 반드시 테스트 케이스를 만들지 않아도 되겠다. 😅
   * VSCode 환경에서는 Code Runner를 사용하자!
     * https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
+    * 💡 **ts-node-esm** 을 사용하게되서 import 문으로 js를 불러올 때... 상대 경로로 설정해줄 필요가 있었다.
 
