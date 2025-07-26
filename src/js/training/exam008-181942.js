@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 문자열 섞기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181942
@@ -13,6 +14,6 @@ function solution(str1, str2) {
 }
 
 // 단순 실행 테스트
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('aaaaa', 'bbbbb') == 'ababababab');
 }

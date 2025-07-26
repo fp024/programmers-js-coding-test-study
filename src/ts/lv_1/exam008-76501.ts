@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 음양 더하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/76501
@@ -11,7 +12,7 @@ function solution(absolutes: number[], signs: boolean[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution([4, 7, 12], [true, false, true]));
   console.log(solution([1, 2, 3], [false, false, true]));
 }

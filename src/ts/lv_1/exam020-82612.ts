@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 부족한 금액 계산하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/82612
@@ -13,7 +14,7 @@ function solution(price: number, money: number, count: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(3, 20, 4));
   console.log(solution(3, 30, 4));
   console.log(solution(3, 31, 4));

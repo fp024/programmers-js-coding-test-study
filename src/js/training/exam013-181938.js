@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 두 수의 연산값 비교하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181938
@@ -14,7 +15,7 @@ function solution(a, b) {
 }
 
 // === 단순 실행 테스트 ===
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   if (solution(2, 91) !== 364) {
     throw Error('Test Case 01 Failed.');
   }

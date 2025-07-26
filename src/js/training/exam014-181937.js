@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * n의 배수
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181937
@@ -11,7 +12,7 @@ function solution(num, n) {
 }
 
 // === 단순 실행 테스트 ===
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   if (solution(98, 2) !== 1) {
     throw Error('Test Case 01 Failed.');
   }

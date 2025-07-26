@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 방문 길이
  *   https://school.programmers.co.kr/learn/courses/30/lessons/49994
@@ -75,7 +76,7 @@ function solution(dirs: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('ULURRDLLU'));
 
   console.log(solution('LULLLLLLU'));

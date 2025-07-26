@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 자연수 뒤집어 배열로 만들기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12932
@@ -12,7 +13,7 @@ function solution(n: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(12345));
 }
 

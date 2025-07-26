@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * flag에 따라 다른 값 반환하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181933
@@ -8,7 +9,7 @@ function solution(a, b, flag) {
 }
 
 // === 단순 실행 테스트 ===
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   if (solution(-4, 7, true) !== 3) {
     throw Error('Test Case 01 Failed.');
   }

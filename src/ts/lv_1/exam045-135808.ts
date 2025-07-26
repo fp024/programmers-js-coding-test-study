@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 과일 장수
  *   https://school.programmers.co.kr/learn/courses/30/lessons/135808
@@ -20,7 +21,7 @@ function solution(k: number, m: number, score: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(3, 4, [1, 2, 3, 1, 2, 3, 1]));
   console.log(solution(4, 3, [4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2]));
 }

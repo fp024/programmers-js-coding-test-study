@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 문자열 다루기 기본
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12918
@@ -12,7 +13,7 @@ function solution(s: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('a1234'));
   console.log(solution('1234'));
 }

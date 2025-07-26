@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 주사위 게임 3
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181916
@@ -45,7 +46,7 @@ function solution(a, b, c, d) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(2, 2, 2, 2));
   console.log(solution(4, 1, 4, 4));
   console.log(solution(6, 3, 3, 6));

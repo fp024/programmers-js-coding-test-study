@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 시저 암호
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12926
@@ -27,7 +28,7 @@ function solution(s: string, n: number) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('AB', 1));
   console.log(solution('z', 1));
   console.log(solution('a B z', 4));

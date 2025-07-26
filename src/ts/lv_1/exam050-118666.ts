@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 성격 유형 검사하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/118666
@@ -53,7 +54,7 @@ function solution(survey: string[], choices: number[]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(['AN', 'CF', 'MJ', 'RT', 'NA'], [5, 3, 2, 7, 5]));
   console.log(solution(['TR', 'RT', 'TR'], [7, 1, 3]));
 }

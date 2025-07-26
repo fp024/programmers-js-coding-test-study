@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 카드 뭉치
  *   https://school.programmers.co.kr/learn/courses/30/lessons/159994
@@ -34,7 +35,7 @@ function solution(cards1: string[], cards2: string[], goal: string[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(
     solution(['i', 'drink', 'water'], ['want', 'to'], ['i', 'want', 'to', 'drink', 'water'])
   );

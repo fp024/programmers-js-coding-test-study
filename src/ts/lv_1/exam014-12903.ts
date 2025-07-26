@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 가운데 글자 가져오기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12903
@@ -17,7 +18,7 @@ function solution(s: string) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('abcde'));
   console.log(solution('qwer'));
   console.log(solution('1'));

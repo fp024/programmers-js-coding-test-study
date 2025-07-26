@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 서울에서 김서방 찾기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12919
@@ -9,7 +10,7 @@ function solution(seoul: string[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(['Jane', 'Kim']));
 }
 

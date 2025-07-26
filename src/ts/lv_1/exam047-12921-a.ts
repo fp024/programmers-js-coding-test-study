@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 소수 찾기 - 나누는 수를 먼저 구한 소수들로 사용
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12921
@@ -40,7 +41,7 @@ function makePrimes(n: number, prime: number[]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(10));
   console.log(solution(5));
 }

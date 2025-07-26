@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 올바른 괄호 - AI 가이드
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12909
@@ -21,7 +22,7 @@ function solution(s: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('()()'));
 
   console.log(solution('(())()'));

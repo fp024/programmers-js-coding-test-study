@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 3진법 뒤집기 - 10번 테스트 케이스가 실패하는 코드
  *   https://school.programmers.co.kr/learn/courses/30/lessons/68935
@@ -28,7 +29,7 @@ function base3ToDecimal(n: BigInt) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(45));
   console.log(solution(125));
 

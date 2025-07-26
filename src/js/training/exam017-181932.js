@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * flag에 따라 다른 값 반환하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181932
@@ -31,7 +32,7 @@ function isDigit(char) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   if (solution('abc1abc1abc') !== 'acbac') {
     throw Error('Test Case 01 Failed.');
   }

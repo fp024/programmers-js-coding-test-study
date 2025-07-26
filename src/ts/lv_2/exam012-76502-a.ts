@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 괄호 회전하기 - 코드리뷰 제안 사항 수정
  *   https://school.programmers.co.kr/learn/courses/30/lessons/76502
@@ -51,7 +52,7 @@ function solution(s: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('[](){}'));
   console.log(solution('}]()[{'));
   console.log(solution('[)(]'));

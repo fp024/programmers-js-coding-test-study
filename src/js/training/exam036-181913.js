@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 문자열 여러 번 뒤집기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181913
@@ -18,7 +19,7 @@ function solution(my_string, queries) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(
     solution('rermgorpsam', [
       [2, 3],

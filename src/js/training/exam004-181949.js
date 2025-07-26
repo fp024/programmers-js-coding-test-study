@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
    대소문자 바꿔서 출력하기
       https://school.programmers.co.kr/learn/courses/30/lessons/181949
@@ -23,6 +24,6 @@ function solution(str) {
 }
 
 // 검증
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('aBcDeFg') === 'AbCdEfG'); // NOSONAR
 }

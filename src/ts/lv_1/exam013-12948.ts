@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 핸드폰 번호 가리기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12948
@@ -12,7 +13,7 @@ function solution(phone_number: string) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('01033334444'));
   console.log(solution('027778888'));
 }

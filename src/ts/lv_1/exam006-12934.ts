@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 정수 제곱근 판별
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12934
@@ -12,7 +13,7 @@ function solution(n: number) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(121));
   console.log(solution(3));
 }

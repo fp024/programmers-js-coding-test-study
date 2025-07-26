@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 조건 문자열
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181934
@@ -21,7 +22,7 @@ function solution(ineq, eq, n, m) {
 }
 
 // === 단순 실행 테스트 ===
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   if (solution('<', '=', 20, 50) !== 1) {
     throw Error('Test Case 01 Failed.');
   }

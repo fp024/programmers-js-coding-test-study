@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 푸드 파이트 대회
  *   https://school.programmers.co.kr/learn/courses/30/lessons/134240
@@ -23,7 +24,7 @@ function solution(food: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution([1, 3, 4, 6]));
   console.log(solution([1, 7, 1, 2]));
 }

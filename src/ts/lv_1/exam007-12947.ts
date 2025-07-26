@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 하샤드 수
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12947
@@ -16,7 +17,7 @@ function solution(x: number) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(10));
   console.log(solution(12));
   console.log(solution(11));

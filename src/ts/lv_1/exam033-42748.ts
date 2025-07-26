@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * K번째 수
  *   https://school.programmers.co.kr/learn/courses/30/lessons/42748
@@ -12,7 +13,7 @@ function solution(array: number[], commands: number[][]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(
     solution(
       [1, 5, 2, 6, 3, 7, 4],

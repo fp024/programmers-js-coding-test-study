@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 기사단원의 무기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/136798
@@ -28,7 +29,7 @@ function divisorCount(n: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(5, 3, 2));
   console.log(solution(10, 3, 2));
 }

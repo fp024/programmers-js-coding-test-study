@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 주식가격
  *   https://school.programmers.co.kr/learn/courses/30/lessons/42584
@@ -15,7 +16,7 @@ function solution(prices: number[]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution([1, 2, 3, 2, 3]));
 }
 // cspell:enable

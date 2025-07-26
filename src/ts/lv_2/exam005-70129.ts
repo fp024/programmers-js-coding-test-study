@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 이진 변환 반복하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/70129
@@ -18,7 +19,7 @@ function solution(s: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('110010101001'));
 
   console.log(solution('01110'));

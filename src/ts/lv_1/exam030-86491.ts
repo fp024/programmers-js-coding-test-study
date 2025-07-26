@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 최소직사각형
  *   https://school.programmers.co.kr/learn/courses/30/lessons/86491
@@ -25,7 +26,7 @@ function solution(sizes: number[][]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(
     solution([
       [60, 50],

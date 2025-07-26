@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 공원 산책
  *   https://school.programmers.co.kr/learn/courses/30/lessons/172928
@@ -95,7 +96,7 @@ function solution(park: string[], routes: string[]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(
     solution(
       [

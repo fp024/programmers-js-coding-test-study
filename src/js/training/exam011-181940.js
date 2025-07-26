@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 문자열 곱하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181940
@@ -13,7 +14,7 @@ function solution(my_string, k) {
 }
 
 // === 단순 실행 테스트 ===
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   if (solution('string', 3) != 'stringstringstring') {
     throw Error('Test Case 01 Failed.');
   }

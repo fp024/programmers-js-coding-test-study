@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 내적
  *   https://school.programmers.co.kr/learn/courses/30/lessons/70128
@@ -11,7 +12,7 @@ function solution(a: number[], b: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution([1, 2, 3, 4], [-3, -1, 0, 2]));
   console.log(solution([-1, 0, 1], [1, 0, -1]));
 }

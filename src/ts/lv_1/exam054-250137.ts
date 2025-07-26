@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * [PCCP 기출문제] 1번 / 붕대 감기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/250137
@@ -42,7 +43,7 @@ function solution(bandage: number[], health: number, attacks: number[][]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(
     solution(
       [5, 1, 5], //

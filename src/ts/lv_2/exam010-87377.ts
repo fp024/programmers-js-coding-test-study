@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 교점에 별 만들기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/87377
@@ -122,7 +123,7 @@ function solution(line: number[][]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(
     solution([
       [2, -1, 4],

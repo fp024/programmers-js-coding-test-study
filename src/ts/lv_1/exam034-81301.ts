@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 숫자 문자열과 영단어
  *   https://school.programmers.co.kr/learn/courses/30/lessons/81301
@@ -49,7 +50,7 @@ function solution(s: string) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('one4seveneight'));
   console.log(solution('23four5six7'));
   console.log(solution('2three45sixseven'));

@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 덧칠하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/161989
@@ -22,7 +23,7 @@ function solution(n: number, m: number, section: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(8, 4, [2, 3, 6]));
   console.log(solution(5, 4, [1, 3]));
   console.log(solution(4, 1, [1, 2, 3, 4]));

@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 약수의 개수와 덧셈
  *   https://school.programmers.co.kr/learn/courses/30/lessons/77884
@@ -18,7 +19,7 @@ function isPerfectSquare(n: number): boolean {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(13, 17));
   console.log(solution(24, 27));
 }

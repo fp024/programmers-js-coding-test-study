@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 신규 아이디 추천
  *   https://school.programmers.co.kr/learn/courses/30/lessons/72410
@@ -46,7 +47,7 @@ function solution(new_id: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('...!@BaT#*..y.abcdefghijklm'));
   console.log(solution('z-+.^.'));
   console.log(solution('=.='));

@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 배열 만들기 2
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181921
@@ -15,7 +16,7 @@ function solution(l, r) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(10, 20));
   console.log(solution(10, 555));
 }

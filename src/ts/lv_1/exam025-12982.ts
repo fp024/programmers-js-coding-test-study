@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 예산
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12982
@@ -20,7 +21,7 @@ function solution(d: number[], budget: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution([1, 3, 2, 5, 4], 9));
 
   console.log(solution([2, 2, 3, 3], 10));

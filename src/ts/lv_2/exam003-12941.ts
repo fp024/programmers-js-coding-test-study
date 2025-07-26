@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 최솟값 만들기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12941
@@ -17,7 +18,7 @@ function solution(A: number[], B: number[]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution([1, 4, 2], [5, 4, 4]));
 
   console.log(solution([1, 2], [3, 4]));

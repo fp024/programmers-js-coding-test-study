@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 다음 큰 숫자
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12911
@@ -20,7 +21,7 @@ function solution(n: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(78));
 
   console.log(solution(15));

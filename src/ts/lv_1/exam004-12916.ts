@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 문자열 내 p와 y의 개수
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12916
@@ -20,7 +21,7 @@ function solution(s: string) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution('pPoooyY'));
   console.log(solution('Pyy'));
 }

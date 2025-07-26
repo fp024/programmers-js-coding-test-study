@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 바탕화면 정리
  *   https://school.programmers.co.kr/learn/courses/30/lessons/161990
@@ -46,7 +47,7 @@ function solution(wallpaper: string[]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   // [
   //   [ 0, 1, 0, 0, 0 ],
   //   [ 0, 0, 1, 0, 0 ],

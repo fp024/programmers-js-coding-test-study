@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /**
  * 소수 찾기 - 💢 효율성 테스트 1,2,4가 실패한다.
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12921
@@ -32,7 +33,7 @@ function divisorCount(n: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution(10));
   console.log(solution(5));
 }

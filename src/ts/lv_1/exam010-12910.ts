@@ -1,3 +1,4 @@
+import { isStandalone } from '../../utils/testHelper.js';
 /*
  * 나누어 떨어지는 숫자 배열
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12910
@@ -11,7 +12,7 @@ function solution(arr: number[], divisor: number) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (process.env.VITEST_WORKER_ID === undefined) {
+if (isStandalone()) {
   console.log(solution([5, 9, 7, 10], 5));
   console.log(solution([2, 36, 1, 3], 1));
   console.log(solution([3, 2, 6], 10));
