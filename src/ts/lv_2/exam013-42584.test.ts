@@ -18,12 +18,15 @@ const DEFAULT_TEST_CASES = [
 //     - 완전 탐색: solution: 3.200s
 //     - 스택 활용: solution_a: 21.053ms
 //     수행시간 차이가 엄청남 👍
-const LARGE_TEST_DATA = 50_000;
+const LARGE_TEST_DATA_COUNT = 50_000;
 
 const EXTRA_TEST_CASES = [
   {
-    prices: Array.from({ length: LARGE_TEST_DATA }, (_, i) => i + 1),
-    expected: Array.from({ length: LARGE_TEST_DATA }, (_, i) => LARGE_TEST_DATA - 1 - i),
+    prices: Array.from({ length: LARGE_TEST_DATA_COUNT }, (_, i) => i + 1),
+    expected: Array.from(
+      { length: LARGE_TEST_DATA_COUNT },
+      (_, i) => LARGE_TEST_DATA_COUNT - 1 - i
+    ),
   },
 ];
 

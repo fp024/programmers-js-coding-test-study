@@ -8,7 +8,8 @@
     "/yarn.lock",
     "/pnp.cjs",
     "/pnp.loader.mjs",
-    "tsconfig.json"
+    "tsconfig.json",
+    "pnpm-workspace.yaml"
   ],
   "words": [],
   "ignoreWords": [
