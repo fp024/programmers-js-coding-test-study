@@ -9,7 +9,8 @@
     "/pnp.cjs",
     "/pnp.loader.mjs",
     "tsconfig.json",
-    "pnpm-workspace.yaml"
+    "pnpm-workspace.yaml",
+    "pnpm-lock.yaml"
   ],
   "words": [],
   "ignoreWords": [

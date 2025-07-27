@@ -22,7 +22,6 @@
 
 # dist
 /dist
-pnpm-lock.yaml
 .pnpm-store
 .pnpm-debug.log
 node_modules/
