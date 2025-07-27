@@ -17,5 +17,8 @@ export default defineConfig({
 
     // TypeScript 지원 (ts-jest 대신 Vite가 처리)
     // 별도 설정 불필요, tsconfig.json을 자동으로 참조
+
+    // 테스트 코드 실행 타임아웃은 프로그래머스의 효율성 한계 시간인 10초로 설정
+    testTimeout: 10_000,
   },
 });

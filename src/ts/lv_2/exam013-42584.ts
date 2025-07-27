@@ -12,6 +12,7 @@ import { isStandalone } from '../../utils/testHelper.js';
       - 인덱스가 초(sec)
       - 값이 주식 시세(원)
     2. 현재 가격 보다 더 낮은 가격이 되기 바로 직전의 시간(초)
+    3. 가격이 떨어지는 순간에도 그 "1초"는 버틴 것으로 간주
 */
 
 function solution(prices: number[]) {
@@ -32,11 +33,17 @@ function solution(prices: number[]) {
 // NOSONAR // cspell:disable
 if (isStandalone()) {
   console.log(solution([1, 2, 3, 2, 3]));
+  console.log(solution([5, 4, 3, 2, 1]));
 }
 // cspell:enable
 // === 문제 읽고 첫 느낌 ===
 //   일단은 O(n^2)으로 정확도는 맞는지만 프로그래머스에서 확인했는데,
 //   정확성과 효율성이 통과가 되었음. 😅
+//     테스트 1 〉	통과 (5.16ms, 43.6MB)
+//     테스트 2 〉	통과 (4.63ms, 42MB)
+//     테스트 3 〉	통과 (9.24ms, 43.9MB)
+//     테스트 4 〉	통과 (5.32ms, 42.3MB)
+//     테스트 5 〉	통과 (5.03ms, 42.2MB)
 //
 // === 다른 사람 풀이 확인 이후 의견 ===
 // ...
