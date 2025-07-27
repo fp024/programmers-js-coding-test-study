@@ -14,22 +14,16 @@ const DEFAULT_TEST_CASES = [
   },
 ];
 
-// 💡 15_000_000 (천오백만)로 설정했을 때는
-//     solution: 9.171s
-//     solution_a: 8.406s
-// 위처럼 0.7초 정도 스택 방식이 빨랐다.
-//
-// 💡 10만개로도 차이가 확실히 있었음.
-//     solution: 64.748ms
-//     solution_a: 38.753ms
-const LARGE_TEST_DATA = 100_000;
+// 💡 5만개의 배드케이스 데이터를 적용했을 때, 확실히 스택의 우위가 드러난다.
+//     - 완전 탐색: solution: 3.200s
+//     - 스택 활용: solution_a: 21.053ms
+//     수행시간 차이가 엄청남 👍
+const LARGE_TEST_DATA = 50_000;
 
 const EXTRA_TEST_CASES = [
   {
-    prices: Array.from({ length: LARGE_TEST_DATA }, (_, i) => LARGE_TEST_DATA - i),
-    expected: Array(LARGE_TEST_DATA - 1)
-      .fill(1)
-      .concat(0),
+    prices: Array.from({ length: LARGE_TEST_DATA }, (_, i) => i + 1),
+    expected: Array.from({ length: LARGE_TEST_DATA }, (_, i) => LARGE_TEST_DATA - 1 - i),
   },
 ];
 
