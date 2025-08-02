@@ -112,7 +112,7 @@
   "ts-node": {
     "esm": true
   },
-  "include": ["src/ts/lv_2"],
+  "include": ["src/ts/lv_2", "src/ts/lv_3"],
   "exclude": [
     "node_modules",
     "**/*.test.ts"
