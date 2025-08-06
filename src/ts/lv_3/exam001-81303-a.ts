@@ -31,12 +31,10 @@ import { isStandalone } from '../../utils/testHelper.js';
 
 function solution(n: number, k: number, cmd: string[]) {
   // 각 행의 앞 인덱스를 저장하는 배열
-  const prevIndexes = Array.from({ length: n + 2 }) //
-    .map((_, i) => i - 1);
+  const prevIndexes = Array.from({ length: n + 2 }, (_, i) => i - 1);
 
   // 각 행의 뒤 인덱스를 저장하는 배열
-  const nextIndexes = Array.from({ length: n + 2 }) //
-    .map((_, i) => i + 1);
+  const nextIndexes = Array.from({ length: n + 2 }, (_, i) => i + 1); //
 
   // 삭제된 행의 인덱스 저장 스택
   const delStack: number[] = [];
