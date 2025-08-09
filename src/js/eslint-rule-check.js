@@ -25,7 +25,11 @@ if (shouldBeConst == 11) {
 if (shouldBeConst === 11) console.log('중괄호 없음');
 
 // 8. no-implicit-coercion: 암시적 타입 변환 허용 (off, 코딩테스트에서 자주 사용)
-const num = 0;
+const num = '1';
 if (!num) {
   console.log('암시적 변환');
+}
+
+if (+num) {
+  console.log('num은 숫자 문자열');
 }
