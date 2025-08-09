@@ -12,5 +12,19 @@
     "javascript": "node",
     "typescript": "pnpm cross-env NODE_OPTIONS=\"--no-deprecation --disable-warning=ExperimentalWarning\" pnpm ts-node-esm" // 💡ts-node-esm 실행은 node v23 환경에서 정상 동작했다.
   },
-  "code-runner.clearPreviousOutput": true
+  "code-runner.clearPreviousOutput": true,
+
+  // ESLint (Flat Config) 통합 설정
+  // - useFlatConfig: eslint.config.js 강제 인식
+  // - validate: JS + TS 모두 즉시 진단
+  // - lintTask.enable: VSCode Task로 전체 Lint 실행 가능
+  // - codeActionsOnSave: 저장 시 자동 수정 (import 정리, fixable rule 등)
+  // - eslint.format.enable: 포맷은 Prettier가 담당하도록 비활성화
+  "eslint.useFlatConfig": true,
+  "eslint.validate": ["javascript", "typescript"],
+  "eslint.lintTask.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit" // VSCode 버전에 따라 boolean 대신 문자열 요구 가능
+  },
+  "eslint.format.enable": false // 필요 시 제거하여 ESLint 포맷 사용 가능
 }
