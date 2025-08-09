@@ -4,8 +4,6 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/81301
  */
 function solution(s: string) {
-  let answer;
-
   const numberSymbols = [
     'zero',
     'one',
@@ -44,7 +42,7 @@ function solution(s: string) {
     }
   }
 
-  answer = +answerString;
+  const answer = +answerString;
 
   return answer;
 }

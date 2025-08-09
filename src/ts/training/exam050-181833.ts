@@ -3,9 +3,9 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181833
  */
 function solution(n: number) {
-  let answer: number[][] = Array.from({ length: n }, (_, rowIndex) =>
+  const answer: number[][] = Array.from({ length: n }, (_, rowIndex) =>
     Array.from({ length: n }, (_, colIndex) => {
-      return rowIndex == colIndex ? 1 : 0;
+      return rowIndex === colIndex ? 1 : 0;
     })
   );
 

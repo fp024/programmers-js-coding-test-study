@@ -6,7 +6,7 @@ function solution(arr: number[]) {
   let answer: number[] = [];
 
   let i = 1;
-  for (; i < arr.length; i *= 2);
+  for (; i < arr.length; i *= 2){;}
 
   for (let j = arr.length; j < i; j++) {
     arr.push(0);

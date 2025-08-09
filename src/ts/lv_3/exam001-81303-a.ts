@@ -43,8 +43,8 @@ function solution(n: number, k: number, cmd: string[]) {
   k = k + 1;
 
   // 명령어 처리
-  for (let c of cmd) {
-    let [command, mStr] = c.split(' ');
+  for (const c of cmd) {
+    const [command, mStr] = c.split(' ');
     const moveDistance = Number(mStr);
 
     switch (command) {
@@ -64,13 +64,14 @@ function solution(n: number, k: number, cmd: string[]) {
         delStack.push(k);
         k = n < nextIndexes[k] ? prevIndexes[k] : nextIndexes[k];
         break;
-      case 'Z':
+      case 'Z': {
         const restoreIndex = delStack.pop();
         if (restoreIndex) {
           nextIndexes[prevIndexes[restoreIndex]] = restoreIndex;
           prevIndexes[nextIndexes[restoreIndex]] = restoreIndex;
         }
         break;
+      }
     }
   }
   const answer = Array.from({ length: n }, () => 'O');

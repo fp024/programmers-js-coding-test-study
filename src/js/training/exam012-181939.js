@@ -6,8 +6,8 @@ import { isStandalone } from '../../utils/testHelper.js';
 function solution(a, b) {
   let answer = 0;
 
-  let aPlusB = Number(a + '' + b);
-  let bPlusA = Number(b + '' + a);
+  const aPlusB = Number(a + '' + b);
+  const bPlusA = Number(b + '' + a);
 
   answer = aPlusB > bPlusA ? aPlusB : bPlusA;
 

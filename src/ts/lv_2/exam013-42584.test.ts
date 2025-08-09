@@ -43,7 +43,7 @@ describe('주식 가격', () => {
   });
 });
 
-describe('주식 가격', () => {
+describe('주식 가격 - 개선코드', () => {
   test.each(DEFAULT_TEST_CASES)('기본 테스트 케이스 검증', ({ prices, expected }) => {
     expect(solution_a(prices)).toEqual(expected);
   });

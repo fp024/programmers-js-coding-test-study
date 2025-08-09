@@ -9,7 +9,7 @@ function solution(my_string, queries) {
   const myStringArray = [...my_string];
 
   queries.forEach(([s, e]) => {
-    let target = myStringArray.slice(s, e + 1).reverse();
+    const target = myStringArray.slice(s, e + 1).reverse();
     myStringArray.splice(s, target.length, ...target);
   });
 

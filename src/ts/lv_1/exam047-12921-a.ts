@@ -5,7 +5,7 @@ import { isStandalone } from '../../utils/testHelper.js';
  * @param n   숫자
  */
 function solution(n: number) {
-  let prime = [2];
+  const prime = [2];
 
   for (let i = 3; i <= n; i = i + 2) {
     // 1과 자기 자신만 약수로 가지는 수인지 확인
@@ -34,7 +34,7 @@ function makePrimes(n: number, prime: number[]) {
     }
   }
 
-  if (count == 1) {
+  if (count === 1) {
     prime.push(n);
   }
 }

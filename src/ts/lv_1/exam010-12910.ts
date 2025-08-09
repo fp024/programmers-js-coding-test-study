@@ -8,7 +8,7 @@ function solution(arr: number[], divisor: number) {
     .filter((n) => n % divisor === 0) //
     .sort((a, b) => a - b);
 
-  return answer.length == 0 ? [-1] : answer;
+  return answer.length === 0 ? [-1] : answer;
 }
 // === 단순 실행 테스트 ===
 // NOSONAR

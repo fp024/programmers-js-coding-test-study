@@ -19,13 +19,16 @@ function solution(a, b, c, d) {
     answer = map.keys().next().value * 1111;
   } else if (map.size === 4) {
     answer = [a, b, c, d].sort((a, b) => a - b)[0];
-  } else if (map.size === 2 && (map.values().next().value == 3 || map.values().next().value == 1)) {
+  } else if (
+    map.size === 2 &&
+    (map.values().next().value === 3 || map.values().next().value === 1)
+  ) {
     const ent = map.entries();
     const sortedEnt = [ent.next().value, ent.next().value].sort((a, b) => a[1] - b[1]);
     const p = sortedEnt[1][0];
     const q = sortedEnt[0][0];
     answer = (10 * p + q) ** 2;
-  } else if (map.size === 2 && map.values().next().value == 2) {
+  } else if (map.size === 2 && map.values().next().value === 2) {
     const iter = map.keys();
     const val1 = iter.next().value;
     const val2 = iter.next().value;

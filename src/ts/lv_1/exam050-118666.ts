@@ -16,7 +16,7 @@ function solution(survey: string[], choices: number[]) {
   // 성격 유형별 총점
   const totalScorePerType: Record<string, number> = {};
 
-  for (let [i, s] of survey.entries()) {
+  for (const [i, s] of survey.entries()) {
     const choice = choices[i];
     const first = s.charAt(1);
     const second = s.charAt(0);
@@ -34,7 +34,7 @@ function solution(survey: string[], choices: number[]) {
   // 출력 양식에 맞게 점수 머지
   const printType = ['RT', 'CF', 'JM', 'AN'];
 
-  for (let p of printType) {
+  for (const p of printType) {
     const left = p.charAt(0);
     const right = p.charAt(1);
 

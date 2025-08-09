@@ -4,10 +4,8 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12948
  */
 function solution(phone_number: string) {
-  let answer;
-
   const maskingCount = phone_number.length - 4;
-  answer = '*'.repeat(maskingCount) + phone_number.slice(maskingCount);
+  const answer = '*'.repeat(maskingCount) + phone_number.slice(maskingCount);
 
   return answer;
 }

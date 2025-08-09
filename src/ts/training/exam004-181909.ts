@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181909
  */
 function solution(my_string: string) {
-  let answer: string[] = [];
+  const answer: string[] = [];
 
   for (let i = 1; i < my_string.length; i++) {
     answer.push(my_string.slice(i, my_string.length));

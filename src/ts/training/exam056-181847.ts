@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181847
  */
 function solution(n_str: string) {
-  let answer = n_str.replace(/^0+/, '');
+  const answer = n_str.replace(/^0+/, '');
   return answer;
 }
 

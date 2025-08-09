@@ -21,7 +21,7 @@ const openBracketSet = new Set(Object.keys(bracketPair));
 function isValidBrackets(brackets: string[]) {
   const stack = [];
 
-  for (let b of brackets) {
+  for (const b of brackets) {
     if (openBracketSet.has(b)) {
       // 괄호를 여는 것은 일단 스택에 넣는다.
       stack.push(b);

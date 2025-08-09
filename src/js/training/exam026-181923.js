@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181923
  */
 function solution(arr, queries) {
-  let answer = [];
+  const answer = [];
 
   queries.forEach((query) => {
     const s = query[0];

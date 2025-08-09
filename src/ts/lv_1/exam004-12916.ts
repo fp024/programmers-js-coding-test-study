@@ -15,7 +15,7 @@ function solution(s: string) {
     }
   });
 
-  let answer = pCount === yCount;
+  const answer = pCount === yCount;
 
   return answer;
 }

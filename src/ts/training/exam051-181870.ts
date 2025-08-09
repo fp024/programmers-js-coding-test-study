@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181870
  */
 function solution(strArr: string[]) {
-  let answer: string[] = strArr.filter((s) => s.indexOf('ad') < 0);
+  const answer: string[] = strArr.filter((s) => s.indexOf('ad') < 0);
 
   return answer;
 }

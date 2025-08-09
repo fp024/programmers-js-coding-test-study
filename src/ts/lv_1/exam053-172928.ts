@@ -4,15 +4,13 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/172928
  */
 function solution(park: string[], routes: string[]) {
-  let answer: number[];
-
   const START = 'S';
   const BLOCK = 'X';
 
   const ROW_MAX = park.length - 1;
   const COL_MAX = park[0].length - 1;
 
-  let currentLocation: Record<string, number> = { row: -1, col: -1 };
+  const currentLocation: Record<string, number> = { row: -1, col: -1 };
   const blockLocations = new Set();
 
   // 시작 위치, 장애물 위치 찾기
@@ -28,7 +26,7 @@ function solution(park: string[], routes: string[]) {
   }
 
   // 명령에 따라 현재 위치 이동
-  for (let route of routes) {
+  for (const route of routes) {
     const routeCommand = route.split(' ');
     const direction = routeCommand[0];
     const distance = Number(routeCommand[1]);
@@ -89,7 +87,7 @@ function solution(park: string[], routes: string[]) {
     }
   }
 
-  answer = [currentLocation.row, currentLocation.col];
+  const answer = [currentLocation.row, currentLocation.col];
 
   return answer;
 }

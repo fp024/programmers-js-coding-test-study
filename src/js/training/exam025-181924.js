@@ -7,7 +7,7 @@ function solution(arr, queries) {
     const firstIndex = query[0];
     const secondIndex = query[1];
 
-    let temp = arr[firstIndex];
+    const temp = arr[firstIndex];
     arr[firstIndex] = arr[secondIndex];
     arr[secondIndex] = temp;
   });

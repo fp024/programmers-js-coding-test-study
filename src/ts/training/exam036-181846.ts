@@ -18,7 +18,7 @@ function solution(a: string, b: string) {
 
   let ceiling = 0; // 올림 수
   for (const [idx, s] of revLong.entries()) {
-    let partSum = ceiling + Number(s) + (idx < revShort.length ? Number(revShort[idx]) : 0);
+    const partSum = ceiling + Number(s) + (idx < revShort.length ? Number(revShort[idx]) : 0);
 
     if (partSum >= 10) {
       ceiling = 1;

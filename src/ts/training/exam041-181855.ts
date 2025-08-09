@@ -5,7 +5,7 @@
 function solution(strArr: string[]) {
   let answer = 0;
 
-  let countArray = strArr.map((c) => c.length);
+  const countArray = strArr.map((c) => c.length);
 
   const countMap = new Map();
   for (const c of countArray) {

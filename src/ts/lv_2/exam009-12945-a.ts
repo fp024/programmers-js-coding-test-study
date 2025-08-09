@@ -9,7 +9,7 @@ function solution(n: number) {
 
   const div = 1_234_567;
   for (let i = 3; i <= n; i++) {
-    let temp = prev;
+    const temp = prev;
     prev = next % div;
     next = (next + temp) % div;
   }

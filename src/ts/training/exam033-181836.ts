@@ -3,9 +3,9 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181836
  */
 function solution(picture: string[], k: number) {
-  let answer: string[] = [];
+  const answer: string[] = [];
 
-  for (let p of picture) {
+  for (const p of picture) {
     // 가로 늘리기
     const expendWidth = [...p].map((c) => c.repeat(k)).join('');
     // 세로 늘리기

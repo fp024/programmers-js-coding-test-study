@@ -6,8 +6,8 @@ import { isStandalone } from '../../utils/testHelper.js';
 function solution(a, b) {
   let answer = 0;
 
-  let first = Number(`${a}${b}`);
-  let second = 2 * a * b;
+  const first = Number(`${a}${b}`);
+  const second = 2 * a * b;
 
   answer = first >= second ? first : second;
 

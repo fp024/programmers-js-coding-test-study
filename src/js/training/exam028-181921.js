@@ -4,10 +4,10 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181921
  */
 function solution(l, r) {
-  let answer = [];
+  const answer = [];
 
   for (let i = l; i <= r; i++) {
-    if (i % 5 == 0 && /^[05]+$/.test('' + i)) {
+    if (i % 5 === 0 && /^[05]+$/.test('' + i)) {
       answer.push(i);
     }
   }

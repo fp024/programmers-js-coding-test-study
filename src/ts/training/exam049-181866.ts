@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181866
  */
 function solution(myString: string) {
-  let answer = myString
+  const answer = myString
     .split('x')
     .filter((c) => c !== '')
     .sort((a, b) => a.localeCompare(b));

@@ -52,7 +52,7 @@ function solution(dirs: string) {
   const moveSet = new Set<string>();
   let uniqueMoveCount = 0;
 
-  for (let dir of dirs) {
+  for (const dir of dirs) {
     const dirPoint = commandDirs[dir];
     const newPoint = movePoint(p, dirPoint);
     if (!isMovable(newPoint)) {

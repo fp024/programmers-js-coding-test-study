@@ -25,7 +25,7 @@ function solution(n: number) {
   }
 
   const primes: number[] = isPrime.reduce((primes, isPrime, num) => {
-    if (isPrime) primes.push(num);
+    if (isPrime) {primes.push(num);}
     return primes;
   }, []);
 

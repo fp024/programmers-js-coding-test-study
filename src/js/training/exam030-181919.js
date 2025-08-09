@@ -4,11 +4,11 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181919
  */
 function solution(n) {
-  let answer = [];
+  const answer = [];
   let x = n;
-  while (x != 1) {
+  while (x !== 1) {
     answer.push(x);
-    if (x % 2 == 0) {
+    if (x % 2 === 0) {
       x = x / 2;
     } else {
       x = 3 * x + 1;

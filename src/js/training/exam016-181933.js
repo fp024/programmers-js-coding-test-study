@@ -4,7 +4,7 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181933
  */
 function solution(a, b, flag) {
-  let answer = flag ? a + b : a - b;
+  const answer = flag ? a + b : a - b;
   return answer;
 }
 

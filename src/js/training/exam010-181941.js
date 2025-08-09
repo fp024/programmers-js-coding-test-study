@@ -12,5 +12,5 @@ function solution(arr) {
 }
 // 단순 실행 테스트
 if (isStandalone()) {
-  console.log(solution(['a', 'b', 'c']) == 'abc');
+  console.log(solution(['a', 'b', 'c']) === 'abc');
 }

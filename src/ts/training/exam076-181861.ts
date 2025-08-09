@@ -3,9 +3,9 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181861
  */
 function solution(arr: number[]) {
-  let answer: number[] = [];
+  const answer: number[] = [];
 
-  for (let a of arr) {
+  for (const a of arr) {
     for (let i = 0; i < a; i++) {
       answer.push(a);
     }

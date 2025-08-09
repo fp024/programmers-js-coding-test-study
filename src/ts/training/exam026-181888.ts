@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181888
  */
 function solution(num_list: number[], n: number) {
-  let answer: number[] = [];
+  const answer: number[] = [];
 
   for (let i = 0; i < num_list.length; i += n) {
     answer.push(num_list[i]);

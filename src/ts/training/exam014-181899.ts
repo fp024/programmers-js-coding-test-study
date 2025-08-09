@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181899
  */
 function solution(start_num: number, end_num: number) {
-  let answer: number[] = Array(start_num - end_num);
+  const answer: number[] = Array(start_num - end_num);
 
   for (let i = start_num, j = 0; i >= end_num; i--, j++) {
     answer[j] = i;

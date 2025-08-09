@@ -9,7 +9,7 @@ import { isStandalone } from '../../utils/testHelper.js';
 function solution(k: number, m: number, score: number[]) {
   score.sort((a, b) => b - a);
 
-  let boxes: number[][] = [];
+  const boxes: number[][] = [];
 
   for (let i = 0; i < score.length; i += m) {
     boxes.push(score.slice(i, i + m));
@@ -17,7 +17,7 @@ function solution(k: number, m: number, score: number[]) {
 
   console.log(boxes);
 
-  return boxes.reduce((acc, box) => acc + (box.length != m ? 0 : box[box.length - 1] * m), 0);
+  return boxes.reduce((acc, box) => acc + (box.length !== m ? 0 : box[box.length - 1] * m), 0);
 }
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable

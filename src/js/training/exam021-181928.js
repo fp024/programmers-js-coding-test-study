@@ -9,7 +9,7 @@ function solution(num_list) {
   let evenString = '';
 
   num_list.forEach((n) => {
-    if (n % 2 == 1) {
+    if (n % 2 === 1) {
       oddString += n;
     } else {
       evenString += n;

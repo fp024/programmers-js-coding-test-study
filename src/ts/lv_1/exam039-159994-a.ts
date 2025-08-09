@@ -7,7 +7,7 @@ function solution(cards1: string[], cards2: string[], goal: string[]) {
   let j = 0;
   let k = 0;
 
-  for (let g of goal) {
+  for (const g of goal) {
     if (g === cards1[j]) {
       j++;
     } else if (g === cards2[k]) {

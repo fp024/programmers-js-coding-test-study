@@ -9,14 +9,14 @@ function solution(arr: number[]) {
   let count = 0;
   while (changed) {
     changed = false;
-    for (let [i, v] of arr.entries()) {
-      if (v >= 50 && v % 2 == 0) {
+    for (const [i, v] of arr.entries()) {
+      if (v >= 50 && v % 2 === 0) {
         const newVal = v / 2;
         if (newVal !== arr[i]) {
           changed = true;
         }
         arr[i] = newVal;
-      } else if (v < 50 && v % 2 == 1) {
+      } else if (v < 50 && v % 2 === 1) {
         const newVal = v * 2 + 1;
         if (newVal !== arr[i]) {
           changed = true;

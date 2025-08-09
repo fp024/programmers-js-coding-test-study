@@ -4,8 +4,6 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/86051
  */
 function solution(absolutes: number[]) {
-  let answer;
-
   const numberSet = new Set([...absolutes]);
   let sum = 0;
 
@@ -15,7 +13,7 @@ function solution(absolutes: number[]) {
     }
   }
 
-  answer = sum;
+  const answer = sum;
   return answer;
 }
 // === 단순 실행 테스트 ===

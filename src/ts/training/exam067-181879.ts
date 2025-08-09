@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181879
  */
 function solution(num_list: number[]) {
-  let answer =
+  const answer =
     num_list.length > 10
       ? num_list.reduce((acc, n) => acc + n, 0)
       : num_list.reduce((acc, n) => acc * n, 1);

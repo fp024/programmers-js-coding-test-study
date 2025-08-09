@@ -9,7 +9,7 @@ function solution(friends: string[], gifts: string[]) {
   // ID별 선물지수,  다음달 받을 선물 카운트
   const [giftPoints, nextMonthGiftCount] = initializeCounters(friends);
 
-  for (let senderReceiversPair of gifts) {
+  for (const senderReceiversPair of gifts) {
     const [sender, receiver] = senderReceiversPair.split(' ');
     // 객체가 없으면 초기화
     if (!giftHistory[sender]) {

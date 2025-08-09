@@ -5,7 +5,7 @@ import { isStandalone } from '../../utils/testHelper.js';
  */
 function solution(n: number) {
   let answer = 0;
-  let halfN = Math.trunc(n / 2);
+  const halfN = Math.trunc(n / 2);
 
   if (n <= 2) {
     return 1;

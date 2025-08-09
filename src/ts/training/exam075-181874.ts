@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181874
  */
 function solution(myString: string) {
-  let answer = [...myString]
+  const answer = [...myString]
     .map((c) => {
       if (c === 'a') {
         return c.toUpperCase();

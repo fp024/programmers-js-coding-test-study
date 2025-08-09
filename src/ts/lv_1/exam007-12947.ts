@@ -4,14 +4,12 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12947
  */
 function solution(x: number) {
-  let answer;
-
   const sum = x
     .toString()
     .split('')
     .reduce((acc, b) => acc + +b, 0);
 
-  answer = x % sum === 0;
+  const answer = x % sum === 0;
 
   return answer;
 }

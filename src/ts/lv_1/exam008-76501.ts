@@ -4,7 +4,7 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/76501
  */
 function solution(absolutes: number[], signs: boolean[]) {
-  let answer = absolutes
+  const answer = absolutes
     .map((v, i) => (signs[i] ? v : -v)) //
     .reduce((acc, v) => acc + v, 0);
 

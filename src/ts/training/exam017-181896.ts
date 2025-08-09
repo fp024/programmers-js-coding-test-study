@@ -5,7 +5,7 @@
 function solution(num_list: number[]) {
   let answer = -1;
 
-  for (let [idx, n] of num_list.entries()) {
+  for (const [idx, n] of num_list.entries()) {
     if (n < 0) {
       answer = idx;
       break;

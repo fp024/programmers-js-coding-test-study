@@ -4,7 +4,7 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/142086
  */
 function solution(s: string) {
-  let answer: number[] = [];
+  const answer: number[] = [];
 
   // 첫글자는 항상 -1
   answer.push(-1);

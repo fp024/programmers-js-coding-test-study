@@ -3,17 +3,15 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181893
  */
 function solution(arr: number[], query: number[]) {
-  let answer: number[];
-
   query.forEach((q, i) => {
-    if (i % 2 == 0) {
+    if (i % 2 === 0) {
       arr.splice(q + 1);
     } else {
       arr.splice(0, q);
     }
   });
 
-  answer = arr;
+  const answer = arr;
 
   return answer;
 }

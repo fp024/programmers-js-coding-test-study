@@ -4,8 +4,6 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/250137
  */
 function solution(bandage: number[], health: number, attacks: number[][]) {
-  let answer;
-
   const MAX_HP = health;
   const [castTime, recoverPerSec, extraRecover] = bandage;
 
@@ -14,7 +12,7 @@ function solution(bandage: number[], health: number, attacks: number[][]) {
   // 연속 성공 시간
   let consecutiveSuccessTime = 0;
 
-  for (let [attackTime, damage] of attacks) {
+  for (const [attackTime, damage] of attacks) {
     // 공격시간 전
     for (let t = prevAttackTime + 1; t < attackTime; t++) {
       health = Math.min(health + recoverPerSec, MAX_HP);
@@ -36,7 +34,7 @@ function solution(bandage: number[], health: number, attacks: number[][]) {
     }
   }
 
-  answer = health <= 0 ? -1 : health;
+  const answer = health <= 0 ? -1 : health;
 
   return answer;
 }

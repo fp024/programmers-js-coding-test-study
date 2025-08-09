@@ -11,7 +11,7 @@ function solution(myStr: string) {
     .split(/,+/g)
     .filter((c) => c !== '');
 
-  return answer.length == 0 ? ['EMPTY'] : answer;
+  return answer.length === 0 ? ['EMPTY'] : answer;
 }
 
 // === 단순 실행 테스트 ===

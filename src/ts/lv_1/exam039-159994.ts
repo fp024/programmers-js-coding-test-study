@@ -8,7 +8,7 @@ function solution(cards1: string[], cards2: string[], goal: string[]) {
   let cards2StartIndex = 0;
   let answer = 'Yes';
 
-  for (let g of goal) {
+  for (const g of goal) {
     const cards1FoundIndex = cards1.indexOf(g, cards1StartIndex);
     if (cards1FoundIndex >= 0) {
       if (cards1FoundIndex - cards1StartIndex > 1) {

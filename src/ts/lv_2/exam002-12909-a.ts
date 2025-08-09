@@ -6,7 +6,7 @@ import { isStandalone } from '../../utils/testHelper.js';
 function solution(s: string) {
   const stack: string[] = [];
 
-  for (let char of s) {
+  for (const char of s) {
     if (char === '(') {
       stack.push('(');
     } else if (char === ')') {

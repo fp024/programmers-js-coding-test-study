@@ -5,7 +5,7 @@ import { isStandalone } from '../../utils/testHelper.js';
  */
 function solution(number: number[]) {
   let answer = 0;
-  let n = number.length;
+  const n = number.length;
 
   for (let i = 0; i < n - 2; i++) {
     for (let j = i + 1; j < n - 1; j++) {

@@ -4,7 +4,7 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181918
  */
 function solution(arr) {
-  let stk = [];
+  const stk = [];
 
   let i = 0;
   while (i < arr.length) {

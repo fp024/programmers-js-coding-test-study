@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181858
  */
 function solution(arr: number[], k: number) {
-  let answer = [...new Set([...arr])].slice(0, k);
+  const answer = [...new Set([...arr])].slice(0, k);
 
   for (let i = answer.length; i < k; i++) {
     answer.push(-1);

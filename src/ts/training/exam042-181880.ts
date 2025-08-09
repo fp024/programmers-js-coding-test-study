@@ -7,7 +7,7 @@ function solution(num_list: number[]) {
 
   let divCount = 0;
 
-  for (let n of num_list) {
+  for (const n of num_list) {
     let num = n;
     while (num > 1) {
       if (num % 2 === 0) {

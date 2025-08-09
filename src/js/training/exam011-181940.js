@@ -15,11 +15,11 @@ function solution(my_string, k) {
 
 // === 단순 실행 테스트 ===
 if (isStandalone()) {
-  if (solution('string', 3) != 'stringstringstring') {
+  if (solution('string', 3) !== 'stringstringstring') {
     throw Error('Test Case 01 Failed.');
   }
 
-  if (solution('love', 10) != 'lovelovelovelovelovelovelovelovelovelove') {
+  if (solution('love', 10) !== 'lovelovelovelovelovelovelovelovelovelove') {
     throw Error('Test Case 02 Failed.');
   }
 }

@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181860
  */
 function solution(arr: number[], flag: boolean[]) {
-  let X: number[] = [];
+  const X: number[] = [];
 
   for (const [i, f] of flag.entries()) {
     if (f) {

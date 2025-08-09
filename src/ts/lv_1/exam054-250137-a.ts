@@ -12,7 +12,7 @@ function solution(bandage: number[], health: number, attacks: number[][]) {
   // 연속 성공 시간
   let consecutiveSuccessTime = 0;
 
-  for (let [attackTime, damage] of attacks) {
+  for (const [attackTime, damage] of attacks) {
     // 공격시간 전 (반복문 대신 수학적 계산 사용)
     const healingTime = attackTime - prevAttackTime - 1; // 회복 가능한 시간
     if (healingTime > 0) {

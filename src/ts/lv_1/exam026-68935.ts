@@ -9,7 +9,7 @@ function solution(n: number) {
 }
 
 function decimalToReverseBase3(n: number) {
-  let t: number[] = [];
+  const t: number[] = [];
   let divResult = n;
   while (divResult >= 3) {
     t.push(divResult % 3);
@@ -20,7 +20,7 @@ function decimalToReverseBase3(n: number) {
   return BigInt(t.join(''));
 }
 
-function base3ToDecimal(n: BigInt) {
+function base3ToDecimal(n: bigint) {
   const nStr = n.toString();
   const nArr = nStr.split('').reverse();
 

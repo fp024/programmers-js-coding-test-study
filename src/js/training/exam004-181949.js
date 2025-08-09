@@ -10,7 +10,7 @@ import { isStandalone } from '../../utils/testHelper.js';
 function solution(str) {
   let result = '';
 
-  let strArray = str.split('');
+  const strArray = str.split('');
 
   for (const char of strArray) {
     if (char.toUpperCase() === char) {

@@ -9,7 +9,7 @@ function solution(s: string, n: number) {
   const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
 
   for (let i = 0; i < s.length; i++) {
-    let c = s.charAt(i);
+    const c = s.charAt(i);
 
     const idx = ALPHABET.indexOf(c.toLowerCase());
 

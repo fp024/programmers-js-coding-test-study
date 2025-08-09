@@ -8,7 +8,7 @@ function solution(s: string) {
 
   const stack: string[] = [];
 
-  for (let s of [...strArr]) {
+  for (const s of [...strArr]) {
     if (s === '(') {
       stack.push('(');
     } else if (s === ')') {

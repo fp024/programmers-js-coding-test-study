@@ -6,16 +6,16 @@ import { isStandalone } from '../../utils/testHelper.js';
 function solution(ineq, eq, n, m) {
   let answer = 0;
 
-  if (ineq == '<') {
+  if (ineq === '<') {
     answer = n < m ? 1 : 0;
-  } else if ('>') {
+  } else if (ineq === '>') {
     answer = n > m ? 1 : 0;
   }
 
-  if (eq == '=') {
-    answer |= n == m ? 1 : 0;
-  } else if ('!') {
-    answer &= n != m ? 1 : 0;
+  if (eq === '=') {
+    answer |= n === m ? 1 : 0;
+  } else if (eq === '!') {
+    answer &= n !== m ? 1 : 0;
   }
 
   return answer;

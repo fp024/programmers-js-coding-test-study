@@ -15,5 +15,5 @@ function solution(str1, str2) {
 
 // 단순 실행 테스트
 if (isStandalone()) {
-  console.log(solution('aaaaa', 'bbbbb') == 'ababababab');
+  console.log(solution('aaaaa', 'bbbbb') === 'ababababab');
 }

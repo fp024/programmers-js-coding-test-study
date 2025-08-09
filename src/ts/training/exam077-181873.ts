@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181873
  */
 function solution(my_string: string, alp: string) {
-  let answer = [...my_string]
+  const answer = [...my_string]
     .map((c) => {
       if (c === alp) {
         return c.toUpperCase();

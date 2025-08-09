@@ -7,7 +7,7 @@ import { isStandalone } from '../../utils/testHelper.js';
 function solution(babbling: string[]) {
   let answer = 0;
 
-  for (let b of babbling) {
+  for (const b of babbling) {
     if (/(aya|ye|woo|ma)\1+/.test(b)) {
       continue; // 연속된 발음이 있으면 건너뜀
     }

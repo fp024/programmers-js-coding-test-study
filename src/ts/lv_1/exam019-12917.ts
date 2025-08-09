@@ -4,9 +4,9 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12917
  */
 function solution(s: string) {
-  let answer =
-    descSortThanJoin(s, (s) => s.toLowerCase() == s) +
-    descSortThanJoin(s, (s) => s.toUpperCase() == s);
+  const answer =
+    descSortThanJoin(s, (s) => s.toLowerCase() === s) +
+    descSortThanJoin(s, (s) => s.toUpperCase() === s);
 
   return answer;
 }

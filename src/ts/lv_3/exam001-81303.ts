@@ -33,8 +33,8 @@ function solution(n: number, k: number, cmd: string[]) {
 
   let cursor = k;
 
-  for (let c of cmd) {
-    let [s, mStr] = c.split(' ');
+  for (const c of cmd) {
+    const [s, mStr] = c.split(' ');
     const m = Number(mStr);
 
     switch (s) {
@@ -54,7 +54,7 @@ function solution(n: number, k: number, cmd: string[]) {
           }
         }
         break;
-      case 'C':
+      case 'C': {
         table[cursor].delFlag = true;
         delStack.push(table[cursor].index);
         // 우선 "아래쪽"을 찾아본다
@@ -74,6 +74,7 @@ function solution(n: number, k: number, cmd: string[]) {
         cursor = newCursor;
 
         break;
+      }
       case 'Z':
         // 💡  if (delStack[delStack.length - 1]) 조건을 이렇게하면
         //     스택 값이 0일 때를 무시해버리게된다. length로 검사해야함.
@@ -87,7 +88,7 @@ function solution(n: number, k: number, cmd: string[]) {
 
   let answer = '';
 
-  for (let row of table) {
+  for (const row of table) {
     answer += row.delFlag ? 'X' : 'O';
   }
   return answer;

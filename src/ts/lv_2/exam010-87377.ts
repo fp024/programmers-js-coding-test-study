@@ -51,7 +51,7 @@ function getMinimumPoint(points: Point[]): Point {
   let minX = Infinity;
   let minY = Infinity;
 
-  for (let { x, y } of points) {
+  for (const { x, y } of points) {
     if (x < minX) {
       minX = x;
     }
@@ -67,7 +67,7 @@ function getMaximumPoint(points: Point[]): Point {
   let maxX = -Infinity;
   let maxY = -Infinity;
 
-  for (let { x, y } of points) {
+  for (const { x, y } of points) {
     if (x > maxX) {
       maxX = x;
     }
@@ -114,7 +114,7 @@ function solution(line: number[][]) {
 
   const answer: string[] = [];
 
-  for (let row of arr) {
+  for (const row of arr) {
     answer.push(row.join(''));
   }
 

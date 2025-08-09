@@ -4,7 +4,7 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12933
  */
 function solution(n: number) {
-  let answer = n
+  const answer = n
     .toString()
     .split('')
     .sort((a, b) => parseInt(b) - parseInt(a))

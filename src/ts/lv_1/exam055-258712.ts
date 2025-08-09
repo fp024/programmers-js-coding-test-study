@@ -6,7 +6,7 @@ import { isStandalone } from '../../utils/testHelper.js';
 function solution(friends: string[], gifts: string[]) {
   let answer = 0;
 
-  let senderAndReceiversObj: Record<string, Record<string, number>> = {};
+  const senderAndReceiversObj: Record<string, Record<string, number>> = {};
 
   // ID별 선물지수
   const giftPoints: Record<string, number> = {};
@@ -20,11 +20,11 @@ function solution(friends: string[], gifts: string[]) {
     nextMonthGiftCount[f] = 0;
   }
 
-  for (let senderReceiversPair of gifts) {
+  for (const senderReceiversPair of gifts) {
     const [sender, receiver] = senderReceiversPair.split(' ');
 
-    if (senderAndReceiversObj.hasOwnProperty(sender)) {
-      if (senderAndReceiversObj[sender].hasOwnProperty(receiver)) {
+    if (Object.prototype.hasOwnProperty.call(senderAndReceiversObj, sender)) {
+      if (Object.prototype.hasOwnProperty.call(senderAndReceiversObj[sender], receiver)) {
         senderAndReceiversObj[sender][receiver]++;
         giftPoints[sender]++;
         giftPoints[receiver]--;
@@ -80,7 +80,7 @@ function solution(friends: string[], gifts: string[]) {
   console.log('-- ID별 다음달 받을 선물 카운트 --');
   console.log(nextMonthGiftCount);
 
-  for (let [_, giftCount] of Object.entries(nextMonthGiftCount).values()) {
+  for (const [_, giftCount] of Object.entries(nextMonthGiftCount).values()) {
     answer = Math.max(answer, giftCount);
   }
 

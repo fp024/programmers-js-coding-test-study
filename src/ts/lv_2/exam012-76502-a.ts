@@ -14,7 +14,7 @@ const openBracketSet = new Set(Object.keys(bracketPair));
 function isValidBracketString(brackets: string) {
   const stack: string[] = [];
 
-  for (let b of brackets) {
+  for (const b of brackets) {
     if (openBracketSet.has(b)) {
       stack.push(b);
     } else if (stack.length === 0) {

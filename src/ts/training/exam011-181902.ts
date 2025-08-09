@@ -3,7 +3,7 @@
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181902
  */
 function solution(my_string: string) {
-  let answer: number[] = Array(52).fill(0);
+  const answer: number[] = Array(52).fill(0);
 
   [...my_string].forEach((c) => {
     if (c.toLowerCase() === c) {

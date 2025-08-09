@@ -4,7 +4,7 @@ import { isStandalone } from '../../utils/testHelper.js';
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12919
  */
 function solution(seoul: string[]) {
-  const idx = seoul.findIndex((v, i) => v === 'Kim');
+  const idx = seoul.findIndex((v, _) => v === 'Kim');
 
   return `김서방은 ${idx}에 있다`;
 }

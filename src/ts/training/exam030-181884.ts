@@ -6,7 +6,7 @@ function solution(numbers: number[], n: number) {
   let answer = 0;
   let sum = 0;
 
-  for (let num of numbers) {
+  for (const num of numbers) {
     sum += num;
     if (sum > n) {
       break;

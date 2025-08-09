@@ -27,6 +27,7 @@ const testCases = [
 // 각 솔루션에 대해 모든 테스트 케이스 실행
 describe('명예의 전당 (1) - 기본 솔루션', () => {
   testCases.forEach((testCase) => {
+    // eslint-disable-next-line vitest/valid-title
     test(testCase.name, () => {
       expect(solution(testCase.k, testCase.scores)).toEqual(testCase.expected);
     });
@@ -35,6 +36,7 @@ describe('명예의 전당 (1) - 기본 솔루션', () => {
 
 describe('명예의 전당 (1) - 개선된 솔루션', () => {
   testCases.forEach((testCase) => {
+    // eslint-disable-next-line vitest/valid-title
     test(testCase.name, () => {
       expect(solution_a(testCase.k, testCase.scores)).toEqual(testCase.expected);
     });
