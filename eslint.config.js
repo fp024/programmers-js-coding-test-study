@@ -30,10 +30,10 @@ export default [
   {
     files: ['**/*.js', '**/*.cjs', '**/*.mjs', '**/*.ts'],
     languageOptions: {
-      ecmaVersion: 2021,
+      ecmaVersion: 2022,
       sourceType: 'module',
       globals: {
-        ...globals.es2021,
+        ...globals.es2022,
         ...globals.node,
       },
     },
@@ -77,7 +77,7 @@ export default [
     plugins: { vitest },
     languageOptions: {
       globals: {
-        ...globals.es2021,
+        ...globals.es2022,
         ...globals.node,
         ...vitest.environments.env.globals,
       },
