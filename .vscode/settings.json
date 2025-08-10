@@ -24,7 +24,7 @@
   "eslint.validate": ["javascript", "typescript"],
   "eslint.lintTask.enable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit" // VSCode 버전에 따라 boolean 대신 문자열 요구 가능
+    "source.fixAll.eslint": "never" // VSCode 버전에 따라 boolean 대신 문자열 요구 가능
   },
   "eslint.format.enable": false // 필요 시 제거하여 ESLint 포맷 사용 가능
 }

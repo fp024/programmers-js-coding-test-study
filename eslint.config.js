@@ -26,9 +26,9 @@ export default [
       '*.d.ts',
     ],
   },
-  // 공통 (JS/TS) 기본
+  // JavaScript 파일 기본 설정
   {
-    files: ['**/*.js', '**/*.cjs', '**/*.mjs', '**/*.ts'],
+    files: ['**/*.js', '**/*.cjs', '**/*.mjs'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -37,7 +37,6 @@ export default [
         ...globals.node,
       },
     },
-    plugins: { vitest },
     rules: {
       ...js.configs.recommended.rules,
       // 일반 규칙 조정
