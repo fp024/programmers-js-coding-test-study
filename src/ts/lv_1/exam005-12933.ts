@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 정수 내림차순으로 배치하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12933
@@ -14,7 +14,7 @@ function solution(n: number) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution(118372));
 }
 

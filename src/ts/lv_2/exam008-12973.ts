@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /**
  * 짝지어 제거하기 (효율성 테스트 : 시간 초과되는 코드)
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12973
@@ -22,7 +22,7 @@ function solution(s: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution('baabaa'));
 
   console.log(solution('cdcd'));

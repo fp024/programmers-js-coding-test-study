@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * flag에 따라 다른 값 반환하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181932
@@ -32,7 +32,7 @@ function isDigit(char) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   if (solution('abc1abc1abc') !== 'acbac') {
     throw Error('Test Case 01 Failed.');
   }

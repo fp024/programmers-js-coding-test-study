@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 문자열 내 마음대로 정렬하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12915
@@ -11,7 +11,7 @@ function solution(strings: string[], n: number) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution(['sun', 'bed', 'car'], 1));
   console.log(solution(['abce', 'abcd', 'cdx'], 2));
 }

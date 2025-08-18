@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 2016년
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12901
@@ -12,7 +12,7 @@ function solution(a: number, b: number) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution(5, 24));
   console.log(solution(1, 1));
 }

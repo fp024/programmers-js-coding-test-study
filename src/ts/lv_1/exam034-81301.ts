@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 숫자 문자열과 영단어
  *   https://school.programmers.co.kr/learn/courses/30/lessons/81301
@@ -48,7 +48,7 @@ function solution(s: string) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution('one4seveneight'));
   console.log(solution('23four5six7'));
   console.log(solution('2three45sixseven'));

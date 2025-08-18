@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /**
  * 표 편집 - 인덱스 기반의 연결 리스트
  *   https://school.programmers.co.kr/learn/courses/30/lessons/81303
@@ -84,7 +84,7 @@ function solution(n: number, k: number, cmd: string[]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(
     solution(8, 2, [
       'D 2', //

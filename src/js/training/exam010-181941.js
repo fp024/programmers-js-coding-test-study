@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 문자 리스트를 문자열로 변환하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181941
@@ -11,6 +11,6 @@ function solution(arr) {
   return answer;
 }
 // 단순 실행 테스트
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution(['a', 'b', 'c']) === 'abc');
 }

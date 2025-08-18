@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 서울에서 김서방 찾기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12919
@@ -10,7 +10,7 @@ function solution(seoul: string[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution(['Jane', 'Kim']));
 }
 

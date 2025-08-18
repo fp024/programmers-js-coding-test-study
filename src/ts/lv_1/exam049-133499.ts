@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /**
  * 옹알이 (2)
  *   https://school.programmers.co.kr/learn/courses/30/lessons/133499
@@ -22,7 +22,7 @@ function solution(babbling: string[]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution(['aya', 'yee', 'u', 'maa']));
   console.log(solution(['ayaye', 'uuu', 'yeye', 'yemawoo', 'ayaayaa']));
 }

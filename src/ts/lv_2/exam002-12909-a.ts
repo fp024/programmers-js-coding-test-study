@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /**
  * 올바른 괄호 - AI 가이드
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12909
@@ -22,7 +22,7 @@ function solution(s: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution('()()'));
 
   console.log(solution('(())()'));

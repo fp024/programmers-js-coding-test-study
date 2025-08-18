@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 명예의 전당 (1)
  *   https://school.programmers.co.kr/learn/courses/30/lessons/138477
@@ -25,7 +25,7 @@ function solution(k: number, score: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution(3, [10, 100, 20, 150, 1, 100, 200]));
   console.log(solution(4, [0, 300, 40, 300, 20, 70, 150, 50, 500, 1000]));
   // 추가 테스트

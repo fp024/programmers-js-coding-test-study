@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 카드 뭉치 - 다른 사람의 풀이 - 추천 2위
  *   https://school.programmers.co.kr/learn/courses/30/lessons/159994
@@ -21,7 +21,7 @@ function solution(cards1: string[], cards2: string[], goal: string[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(
     solution(['i', 'drink', 'water'], ['want', 'to'], ['i', 'want', 'to', 'drink', 'water'])
   );

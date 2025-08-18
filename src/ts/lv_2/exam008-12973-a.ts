@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /**
  * 짝지어 제거하기 - 힌트 제목에 스택이란 말이 나와서 스택을 활용해보자!
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12973
@@ -20,7 +20,7 @@ function solution(s: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution('baabaa'));
 
   console.log(solution('cdcd'));

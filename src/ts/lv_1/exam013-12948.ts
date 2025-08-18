@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 핸드폰 번호 가리기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12948
@@ -11,7 +11,7 @@ function solution(phone_number: string) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution('01033334444'));
   console.log(solution('027778888'));
 }

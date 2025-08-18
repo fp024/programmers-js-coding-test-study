@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 자연수 뒤집어 배열로 만들기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12932
@@ -13,7 +13,7 @@ function solution(n: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution(12345));
 }
 

@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /**
  * 다음 큰 숫자
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12911
@@ -21,7 +21,7 @@ function solution(n: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution(78));
 
   console.log(solution(15));

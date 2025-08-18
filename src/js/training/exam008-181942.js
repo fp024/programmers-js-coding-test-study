@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 문자열 섞기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/181942
@@ -14,6 +14,6 @@ function solution(str1, str2) {
 }
 
 // 단순 실행 테스트
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution('aaaaa', 'bbbbb') === 'ababababab');
 }

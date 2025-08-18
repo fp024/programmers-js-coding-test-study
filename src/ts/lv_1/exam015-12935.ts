@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 제일 작은 수 제거하기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12935
@@ -17,7 +17,7 @@ function solution(arr: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution([4, 3, 2, 1]));
   console.log(solution([10]));
 }

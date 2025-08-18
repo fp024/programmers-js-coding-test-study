@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /**
  * [PCCP 기출문제] 1번 / 붕대 감기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/250137
@@ -41,7 +41,7 @@ function solution(bandage: number[], health: number, attacks: number[][]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(
     solution(
       [5, 1, 5], //

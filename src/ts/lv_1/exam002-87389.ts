@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 나머지가 1이 되는 수 찾기
  *   https://school.programmers.co.kr/learn/courses/30/lessons/87389
@@ -17,7 +17,7 @@ function solution(n: number) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution(10));
   console.log(solution(12));
 }

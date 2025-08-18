@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /**
  * 최댓값과 최솟값
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12939
@@ -17,7 +17,7 @@ function solution(s: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution('1 2 3 4'));
 
   console.log(solution('-1 -2 -3 -4'));

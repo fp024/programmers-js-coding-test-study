@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 내적
  *   https://school.programmers.co.kr/learn/courses/30/lessons/70128
@@ -12,7 +12,7 @@ function solution(a: number[], b: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution([1, 2, 3, 4], [-3, -1, 0, 2]));
   console.log(solution([-1, 0, 1], [1, 0, -1]));
 }

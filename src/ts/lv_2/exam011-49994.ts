@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /**
  * 방문 길이
  *   https://school.programmers.co.kr/learn/courses/30/lessons/49994
@@ -76,7 +76,7 @@ function solution(dirs: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution('ULURRDLLU'));
 
   console.log(solution('LULLLLLLU'));

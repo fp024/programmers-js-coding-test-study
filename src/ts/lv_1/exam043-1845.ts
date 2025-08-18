@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 폰켓몬
  *   https://school.programmers.co.kr/learn/courses/30/lessons/1845
@@ -10,7 +10,7 @@ function solution(nums: number[]) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution([3, 1, 2, 3]));
   console.log(solution([3, 3, 3, 2, 2, 4]));
   console.log(solution([3, 3, 3, 2, 2, 2]));

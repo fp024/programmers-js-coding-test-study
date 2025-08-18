@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /**
  * 가장 많이 받은 선물 - AI 코드 리뷰
  *   https://school.programmers.co.kr/learn/courses/30/lessons/258712
@@ -80,7 +80,7 @@ function initializeCounters(friends: string[]) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(
     solution(
       ['muzi', 'ryan', 'frodo', 'neo'], //

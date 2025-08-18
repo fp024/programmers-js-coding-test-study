@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 크기가 작은 부분 문자열
  *   https://school.programmers.co.kr/learn/courses/30/lessons/147355
@@ -17,7 +17,7 @@ function solution(t: string, p: string) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution('3141592', '271'));
   console.log(solution('500220839878', '7'));
   console.log(solution('10203', '15'));

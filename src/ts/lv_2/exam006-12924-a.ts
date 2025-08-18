@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /**
  * 숫자의 표현 - AI 가이드 - 투포인터
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12924
@@ -32,7 +32,7 @@ function solution(n: number) {
 
 // === 단순 실행 테스트 ===
 // NOSONAR // cspell:disable
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution(15));
 
   console.log(solution(2));

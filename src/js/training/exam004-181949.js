@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
    대소문자 바꿔서 출력하기
       https://school.programmers.co.kr/learn/courses/30/lessons/181949
@@ -24,6 +24,6 @@ function solution(str) {
 }
 
 // 검증
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution('aBcDeFg') === 'AbCdEfG'); // NOSONAR
 }

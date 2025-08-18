@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 가장 가까운 글자
  *   https://school.programmers.co.kr/learn/courses/30/lessons/142086
@@ -26,7 +26,7 @@ function solution(s: string) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution('banana'));
   console.log(solution('foobar'));
   console.log(solution('aaa'));

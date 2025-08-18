@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 홀짝 구분하기
  * https://school.programmers.co.kr/learn/courses/30/lessons/181944
@@ -8,7 +8,7 @@ function solution(n) {
   console.log(msg);
 }
 
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   solution(0);
   solution(1);
   solution(2);

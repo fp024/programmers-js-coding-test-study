@@ -1,4 +1,4 @@
-import { isStandalone } from '../../utils/testHelper.js';
+import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
  * 시저 암호
  *   https://school.programmers.co.kr/learn/courses/30/lessons/12926
@@ -28,7 +28,7 @@ function solution(s: string, n: number) {
 }
 // === 단순 실행 테스트 ===
 // NOSONAR
-if (isStandalone()) {
+if (isDirectRun(import.meta.url)) {
   console.log(solution('AB', 1));
   console.log(solution('z', 1));
   console.log(solution('a B z', 4));
