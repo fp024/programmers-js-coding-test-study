@@ -16,8 +16,8 @@ import { isDirectRun } from '../../utils/isDirectRun.js';
  * @returns {string} 문장을 만들 수 있는지 여부 "Yes" or "No"
  */
 class Queue {
-  /** @type {number} */ #front = -1;
-  /** @type {number} */ #rear = -1;
+  /** @type {number} */ #front = -1; // 데이터가 나가는 위치 (pop)
+  /** @type {number} */ #rear = -1; // 데이터가 들어오는 위치 (push)
   /** @type {any[]} */ #data = [];
   /** @type {number} */ #maxSize;
   /** @type {number} */ #size;
@@ -52,8 +52,8 @@ class Queue {
     if (this.isFull()) {
       throw Error('Queue is Full!');
     }
-    this.#front = ++this.#front % this.#maxSize;
-    this.#data[this.#front] = item;
+    this.#rear = (this.#rear + 1) % this.#maxSize;
+    this.#data[this.#rear] = item;
     this.#size++;
   }
   /**
@@ -64,9 +64,11 @@ class Queue {
     if (this.isEmpty()) {
       throw Error('Queue is Empty!');
     }
+
+    this.#front = (this.#front + 1) % this.#maxSize;
+    const item = this.#data[this.#front];
     this.#size--;
-    this.#rear = ++this.#rear % this.#maxSize;
-    return this.#data[this.#rear];
+    return item;
   }
 
   /**
@@ -78,7 +80,7 @@ class Queue {
       return null;
     }
 
-    return this.#data[(this.#rear + 1) % this.#maxSize];
+    return this.#data[(this.#front + 1) % this.#maxSize];
   }
 
   toString() {
