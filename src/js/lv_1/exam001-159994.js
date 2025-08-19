@@ -9,11 +9,6 @@ import { isDirectRun } from '../../utils/isDirectRun.js';
 
 /**
  * 원형 큐
- *
- * @param {string[]} cards1 - 카드뭉치 1
- * @param {string[]} cards2 - 카드뭉치 2
- * @param {string[]} cards2 - 만들 단어 목록
- * @returns {string} 문장을 만들 수 있는지 여부 "Yes" or "No"
  */
 class Queue {
   /** @type {number} */ #front = -1; // 데이터가 나가는 위치 (pop)
@@ -45,7 +40,7 @@ class Queue {
 
   /**
    * 큐에 데이터 넣기
-   * @param {number} item
+   * @param {any} item
    * @return {void}
    */
   push(item) {
@@ -58,7 +53,7 @@ class Queue {
   }
   /**
    * 큐에서 데이터 빼기
-   * @return {number}
+   * @return {any}
    */
   pop() {
     if (this.isEmpty()) {
@@ -73,7 +68,7 @@ class Queue {
 
   /**
    * 큐에서 데이터 확인
-   * @return {number | null}
+   * @return {any | null}
    */
   peek() {
     if (this.isEmpty()) {
@@ -94,6 +89,12 @@ class Queue {
   }
 }
 
+/**
+ * @param {string[]} cards1 - 카드뭉치 1
+ * @param {string[]} cards2 - 카드뭉치 2
+ * @param {string[]} goal - 만들 단어 목록
+ * @returns {string} 문장을 만들 수 있는지 여부 "Yes" or "No"
+ */
 function solution(cards1, cards2, goal) {
   const cards1Queue = new Queue(cards1.length);
   cards1.forEach((item) => cards1Queue.push(item));
