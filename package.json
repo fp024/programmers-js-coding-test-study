@@ -7,19 +7,19 @@
     "node": ">=16.17.0"
   },
   "devDependencies": {
-    "@types/node": "^24.2.1",
+    "@eslint/js": "^9.34.0",
+    "@types/node": "^24.3.0",
     "cross-env": "^10.0.0",
+    "eslint": "^9.34.0",
+    "eslint-plugin-vitest": "^0.5.4",
+    "globals": "^16.3.0",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "tslib": "^2.8.1",
     "typescript": "^5.9.2",
-    "vitest": "^3.2.4",
-    "eslint": "^9.33.0",
-    "@eslint/js": "^9.33.0",
-    "typescript-eslint": "^8.39.0",
-    "globals": "^16.3.0",
-    "eslint-plugin-vitest": "^0.5.4"
+    "typescript-eslint": "^8.41.0",
+    "vitest": "^3.2.4"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
