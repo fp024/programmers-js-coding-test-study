@@ -3,7 +3,7 @@
 import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
-import vitest from 'eslint-plugin-vitest';
+import vitest from '@vitest/eslint-plugin';
 
 /**
  * 설계 원칙
@@ -72,7 +72,7 @@ export default [
   }),
   // Vitest 테스트 파일
   {
-    files: ['**/*.test.js', '**/*.test.ts'],
+    files: ['**/*.test.{js,ts}', '**/*.spec.{js,ts}', 'test/**/*.{js,ts}'],
     plugins: { vitest },
     languageOptions: {
       globals: {
@@ -85,6 +85,8 @@ export default [
       ...vitest.configs.recommended.rules,
       'vitest/no-disabled-tests': 'warn',
       'vitest/no-focused-tests': 'error',
+      'vitest/prefer-to-be': 'warn',
+      'vitest/prefer-to-have-length': 'warn',
     },
   },
 ];

@@ -2,16 +2,16 @@
   "name": "programmers-js-coding-test-study",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@10.15.1",
   "engines": {
     "node": ">=16.17.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
     "@types/node": "^24.3.0",
+    "@vitest/eslint-plugin": "^1.3.6",
     "cross-env": "^10.0.0",
     "eslint": "^9.34.0",
-    "eslint-plugin-vitest": "^0.5.4",
     "globals": "^16.3.0",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
