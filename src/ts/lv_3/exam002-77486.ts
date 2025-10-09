@@ -30,7 +30,7 @@ function solution(enroll: string[], referral: string[], seller: string[], amount
     sellerProfitMap.set(e, 0);
   }
 
-  // (1) 자식-부모 관게 맵
+  // (1) 자식-부모 관계 맵
   const childParentMap = new Map<string, string>();
   for (let i = 0; i < enroll.length; i++) {
     childParentMap.set(enroll[i], referral[i]);
