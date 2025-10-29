@@ -45,7 +45,7 @@ class Queue {
    */
   push(item) {
     if (this.isFull()) {
-      throw Error('Queue is Full!');
+      throw new Error('Queue is Full!');
     }
     this.#rear = (this.#rear + 1) % this.#maxSize;
     this.#data[this.#rear] = item;
@@ -57,7 +57,7 @@ class Queue {
    */
   pop() {
     if (this.isEmpty()) {
-      throw Error('Queue is Empty!');
+      throw new Error('Queue is Empty!');
     }
 
     this.#front = (this.#front + 1) % this.#maxSize;

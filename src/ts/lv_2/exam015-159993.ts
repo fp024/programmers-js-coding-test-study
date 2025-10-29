@@ -43,7 +43,7 @@ class Queue<T> {
    */
   push(item: T) {
     if (this.isFull()) {
-      throw Error('Queue is Full!');
+      throw new Error('Queue is Full!');
     }
     this.rear = (this.rear + 1) % this.maxSize;
     this.data[this.rear] = item;
@@ -54,7 +54,7 @@ class Queue<T> {
    */
   pop() {
     if (this.isEmpty()) {
-      throw Error('Queue is Empty!');
+      throw new Error('Queue is Empty!');
     }
 
     this.front = (this.front + 1) % this.maxSize;
@@ -128,10 +128,8 @@ function solution(maps: string[]) {
     [y][x][0]: 레버를 당기기 전 방문 여부
     [y][x][1]: 레버를 당긴 후 방문 여부
   */
-  const visited: boolean[][][] = Array.from(Array(ROW), () =>
-    Array(COL)
-      .fill(false)
-      .map(() => Array(2).fill(false))
+  const visited: boolean[][][] = Array.from(new Array(ROW), () =>
+    new Array(COL).fill(false).map(() => new Array(2).fill(false))
   );
 
   // 큐에 넣을 `방문 정보`가 보드 크기를 벗어날일은 없을 것 같다. 😅

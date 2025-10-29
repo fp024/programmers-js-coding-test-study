@@ -41,8 +41,8 @@ describe('Queue 테스트', () => {
     expect(queue.isFull()).toBeFalsy();
 
     queue.push(1);
-    queue.push(2);
-    queue.push(3);
+    queue.push(2); // NOSONAR
+    queue.push(3); // NOSONAR
 
     expect(queue.isEmpty()).toBeFalsy();
     expect(queue.isFull()).toBeTruthy();

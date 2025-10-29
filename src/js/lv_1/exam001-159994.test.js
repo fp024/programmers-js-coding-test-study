@@ -1,6 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import solution from './exam001-159994.js';
-import { Queue } from './exam001-159994.js';
+import solution, { Queue } from './exam001-159994.js';
 
 // cspell:disable
 const DEFAULT_TEST_CASES = [
@@ -30,8 +29,8 @@ describe('Queue 테스트', () => {
     expect(queue.isEmpty()).toBeTruthy();
 
     queue.push(1);
-    queue.push(2);
-    queue.push(3);
+    queue.push(2); // NOSONAR
+    queue.push(3); // NOSONAR
 
     expect(queue.isFull()).toBeTruthy();
 
@@ -42,8 +41,8 @@ describe('Queue 테스트', () => {
     expect(queue.isEmpty()).toBeTruthy();
 
     queue.push(4);
-    queue.push(5);
-    queue.push(6);
+    queue.push(5); // NOSONAR
+    queue.push(6); // NOSONAR
 
     expect(queue.isFull()).toBeTruthy();
 

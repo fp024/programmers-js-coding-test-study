@@ -18,7 +18,7 @@ function solution(prices: number[]) {
   const stack: number[] = [];
 
   for (let i = 0; i < prices.length; i++) {
-    while (stack.length > 0 && prices[stack[stack.length - 1]] > prices[i]) {
+    while (stack.length > 0 && prices[stack.at(-1)!] > prices[i]) {
       const index = stack.pop() as number;
       answer[index] = i - index;
     }

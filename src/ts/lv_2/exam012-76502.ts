@@ -19,7 +19,7 @@ const bracketPair: Record<string, string> = {
 const openBracketSet = new Set(Object.keys(bracketPair));
 
 function isValidBrackets(brackets: string[]) {
-  const stack = [];
+  const stack: string[] = [];
 
   for (const b of brackets) {
     if (openBracketSet.has(b)) {
@@ -32,7 +32,7 @@ function isValidBrackets(brackets: string[]) {
       // 스택이 비어있지 않은 상태에서 괄호를 여는 문자가 아니면 (닫는 괄호 문자)
       // 괄호쌍이 일치하면 스택에서 여는 괄호를 제거하고
       // 일치하지 않으면 올바른 괄호 문자가 아닌 것으로 간주한다.
-      const openBracket = stack[stack.length - 1] as string; // stack peek 같은 코드를 사용해야한다.
+      const openBracket = stack.at(-1)!; // stack peek 같은 코드를 사용해야한다.
       if (bracketPair[openBracket] === b) {
         stack.pop();
       } else {
@@ -49,7 +49,7 @@ function solution(s: string) {
   let answer = 0;
   const brackets = [...s];
 
-  for (let i = 0; i < s.length; i++) {
+  for (const _ of s) {
     // 괄호 검사 영역...
     console.log(brackets);
     if (isValidBrackets(brackets)) {

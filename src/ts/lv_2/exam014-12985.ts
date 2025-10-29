@@ -20,12 +20,12 @@ function solution(n: number, a: number, b: number) {
     b = Math.ceil(b / 2);
 
     console.log(`nextA: ${a}, nextB: ${b}`);
-    if (a !== b) {
-      answer++;
-    } else {
+    if (a === b) {
       // 만나는 상태
       answer += 1;
       break;
+    } else {
+      answer++;
     }
   }
 
