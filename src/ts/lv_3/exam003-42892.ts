@@ -32,10 +32,9 @@ class Node {
 }
 
 function solution(nodeInfo: number[][]) {
-  const nodes: Node[] = new Array(nodeInfo.length);
-  for (let i = 0; i < nodeInfo.length; i++) {
-    nodes[i] = new Node(nodeInfo[i][0], nodeInfo[i][1], i + 1);
-  }
+  const nodes: Node[] = nodeInfo.map(
+    ([x, y], i) => new Node(x, y, i + 1) //
+  );
   // 레벨을 맞추기 위해 y축 기준으로 내림차순 정렬
   nodes.sort((a, b) => b.y - a.y);
 
@@ -47,7 +46,7 @@ function solution(nodeInfo: number[][]) {
   preOrder(rootNode, preOrderResult);
   postOrder(rootNode, postOrderResult);
 
-  return [[...preOrderResult], [...postOrderResult]];
+  return [preOrderResult, postOrderResult];
 }
 
 /**
@@ -67,53 +66,54 @@ function createBinaryTree(nodes: Node[]) {
 /**
  * 노드 삽입
  *
- * @param parentNode 부모 노드
+ * @param parentNode 현재 노드
  * @param node 삽입할 노드
  */
 function insertNode(parentNode: Node, node: Node) {
   if (node.x < parentNode.x) {
     if (parentNode.left === null) {
       parentNode.left = node;
-    } else {
-      insertNode(parentNode.left, node);
+      return;
     }
-  } else {
-    if (parentNode.right === null) {
-      parentNode.right = node;
-    } else {
-      insertNode(parentNode.right, node);
-    }
+    insertNode(parentNode.left, node);
+    return;
   }
+
+  if (parentNode.right === null) {
+    parentNode.right = node;
+    return;
+  }
+  insertNode(parentNode.right, node);
 }
 
 /**
  * 전위 순회: P(방문) -> L -> R
  *
- * @param parentNode 부모노드
+ * @param currentNode 현재 노드
  * @param visitedNodeNumber 방문 노드 넘버 목록
  */
-function preOrder(parentNode: Node | null, visitedNodeNumber: number[]) {
-  if (parentNode === null) {
+function preOrder(currentNode: Node | null, visitedNodeNumber: number[]) {
+  if (currentNode === null) {
     return;
   }
-  visitedNodeNumber.push(parentNode.nodeNumber);
-  preOrder(parentNode.left, visitedNodeNumber);
-  preOrder(parentNode.right, visitedNodeNumber);
+  visitedNodeNumber.push(currentNode.nodeNumber);
+  preOrder(currentNode.left, visitedNodeNumber);
+  preOrder(currentNode.right, visitedNodeNumber);
 }
 
 /**
  * 후위 순회: L -> R -> P(방문)
  *
- * @param parentNode 부모노드
+ * @param currentNode 현재 노드
  * @param visitedNodeNumber 방문 노드 넘버 목록
  */
-function postOrder(parentNode: Node | null, visitedNodeNumber: number[]) {
-  if (parentNode === null) {
+function postOrder(currentNode: Node | null, visitedNodeNumber: number[]) {
+  if (currentNode === null) {
     return;
   }
-  postOrder(parentNode.left, visitedNodeNumber);
-  postOrder(parentNode.right, visitedNodeNumber);
-  visitedNodeNumber.push(parentNode.nodeNumber);
+  postOrder(currentNode.left, visitedNodeNumber);
+  postOrder(currentNode.right, visitedNodeNumber);
+  visitedNodeNumber.push(currentNode.nodeNumber);
 }
 
 // === 단순 실행 테스트 ===
