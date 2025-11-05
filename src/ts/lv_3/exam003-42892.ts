@@ -107,13 +107,13 @@ function preOrder(parentNode: Node | null, visitedNodeNumber: number[]) {
  * @param parentNode 부모노드
  * @param visitedNodeNumber 방문 노드 넘버 목록
  */
-function postOrder(node: Node | null, visitedNodeNumber: number[]) {
-  if (node === null) {
+function postOrder(parentNode: Node | null, visitedNodeNumber: number[]) {
+  if (parentNode === null) {
     return;
   }
-  postOrder(node.left, visitedNodeNumber);
-  postOrder(node.right, visitedNodeNumber);
-  visitedNodeNumber.push(node.nodeNumber);
+  postOrder(parentNode.left, visitedNodeNumber);
+  postOrder(parentNode.right, visitedNodeNumber);
+  visitedNodeNumber.push(parentNode.nodeNumber);
 }
 
 // === 단순 실행 테스트 ===
