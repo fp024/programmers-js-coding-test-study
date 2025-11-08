@@ -1,17 +1,13 @@
 import { isDirectRun } from '../../utils/isDirectRun.js';
 /**
- * 길 찾기 게임
+ * 길 찾기 게임 - 이진트리 생성 / 전위 순회 / 후위 순회를 재귀로 만들기!
  *   https://school.programmers.co.kr/learn/courses/30/lessons/42892
  */
 
 /*
    문제 풀이 전략
-     1. 기초 데이터에서 이진트리의 레벨이 구분되는 데이터 만들기
-        - y축 기준으로 정렬해서 트리의 레벨이 구분되는 데이터를 만든다.
-        - 정렬이 되면 첫번째 요소가 루트가 된다.
-     2. 1에서 얻은 루트를 기준으로 삼아, 이진 트리를 만든다.
-        - ...
-     3. 전위순회, 후위순회를 합쳐서 답안 반환
+     ...
+     이번에는 트리 생성, 전위순회, 후위순회를 재귀로 만들어보자!
 */
 
 /**
@@ -72,20 +68,22 @@ function createBinaryTree(nodes: Node[]) {
  * @param node 삽입할 노드
  */
 function insertNode(parentNode: Node, node: Node) {
-  if (node.x < parentNode.x) {
-    if (parentNode.left === null) {
-      parentNode.left = node;
-      return;
+  let currentParentNode = parentNode;
+  while (true) {
+    if (node.x < currentParentNode.x) {
+      if (currentParentNode.left === null) {
+        currentParentNode.left = node;
+        return;
+      }
+      currentParentNode = currentParentNode.left;
+    } else if (node.x > currentParentNode.x) {
+      if (currentParentNode.right === null) {
+        currentParentNode.right = node;
+        return;
+      }
+      currentParentNode = currentParentNode.right;
     }
-    insertNode(parentNode.left, node);
-    return;
   }
-
-  if (parentNode.right === null) {
-    parentNode.right = node;
-    return;
-  }
-  insertNode(parentNode.right, node);
 }
 
 /**

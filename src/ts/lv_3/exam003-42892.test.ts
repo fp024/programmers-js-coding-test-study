@@ -1,5 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import solution from './exam003-42892';
+import solution_loop from './exam003-42892-a';
 
 // cspell:disable
 const DEFAULT_TEST_CASES = [
@@ -23,8 +24,14 @@ const DEFAULT_TEST_CASES = [
 ];
 
 // cspell:enable
-describe('길 찾기 게임', () => {
+describe('길 찾기 게임 - 재귀', () => {
   test.each(DEFAULT_TEST_CASES)('기본 테스트 케이스 검증', ({ nodeInfo, expected }) => {
     expect(solution(nodeInfo)).toEqual(expected);
+  });
+});
+
+describe('길 찾기 게임 - 루프', () => {
+  test.each(DEFAULT_TEST_CASES)('기본 테스트 케이스 검증', ({ nodeInfo, expected }) => {
+    expect(solution_loop(nodeInfo)).toEqual(expected);
   });
 });
