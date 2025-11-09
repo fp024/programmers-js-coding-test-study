@@ -7,7 +7,7 @@ import { isDirectRun } from '../../utils/isDirectRun.js';
 /*
    문제 풀이 전략
      ...
-     이번에는 트리 생성, 전위순회, 후위순회를 재귀로 만들어보자!
+     이번에는 트리 생성, 전위순회, 후위순회를 재귀 대신 반복문으로 만들어보자!
 */
 
 /**
@@ -101,12 +101,11 @@ function insertNode(parentNode: Node, node: Node) {
  * @param rootNode 현재 노드
  * @param visitedNodeNumber 방문 노드 넘버 목록
  */
-function preOrder(rootNode: Node | null, visitedNodeNumber: number[]) {
-  let currentNode = rootNode;
-  const stack = [currentNode];
+function preOrder(rootNode: Node, visitedNodeNumber: number[]) {
+  const stack = [rootNode];
 
   while (stack.length > 0) {
-    currentNode = stack.pop()!;
+    const currentNode = stack.pop()!;
     visitedNodeNumber.push(currentNode.nodeNumber);
 
     if (currentNode.right !== null) {
@@ -120,18 +119,53 @@ function preOrder(rootNode: Node | null, visitedNodeNumber: number[]) {
 }
 
 /**
+ * 스택 프레임 타입 정의: { 노드, 노드 방문여부}
+ */
+type StackFrame = {
+  node: Node;
+  visited: boolean;
+};
+/**
  * 후위 순회: L -> R -> P(방문)
  *
- * @param currentNode 현재 노드
+ * 자식 부터 순회하고, 부모를 방문하므로
+ * 부모를 방문 했는지 플레그를 별도로 설정하고
+ * 자식을 순회후 부모를 방문 하는 식으로 진행한다.
+ *
+ * 1. 스텍 프레임 타입 정의: { 노드, 노드 방문여부}
+ * 2. 스택에 방문 전 상태의 루트 노드 삽입
+ * 3. 반복
+ *   1) 스택에서 꺼내기
+ *   2) 방문 여부
+ *      a. 방문 했다면 답안에 노드 번호 추가
+ *      b. 방문 하지 않았다면.
+ *         💡 스택은 LIFO이므로 P, R, L 순으로 스택에 넣는다.
+ *         1: 스택에 현재 노드를 방문으로 마킹하고 스택에 넣음
+ *         2: 현재 노드의 오른쪽 노드가 있다면 방문 전 상태로 스택에 넣음
+ *         3: 현재 노드의 왼쪽 노드가 있다면 방문 전 상태로 스택에 넣음
+ *
+ * @param rootNode 루트 노드
  * @param visitedNodeNumber 방문 노드 넘버 목록
  */
-function postOrder(currentNode: Node | null, visitedNodeNumber: number[]) {
-  if (currentNode === null) {
-    return;
+function postOrder(rootNode: Node, visitedNodeNumber: number[]) {
+  const stack: StackFrame[] = [{ node: rootNode, visited: false }];
+
+  while (stack.length > 0) {
+    const { node: currentNode, visited } = stack.pop()!;
+
+    if (visited) {
+      visitedNodeNumber.push(currentNode.nodeNumber);
+    } else {
+      stack.push({ node: currentNode, visited: true });
+
+      if (currentNode.right !== null) {
+        stack.push({ node: currentNode.right, visited: false });
+      }
+      if (currentNode.left !== null) {
+        stack.push({ node: currentNode.left, visited: false });
+      }
+    }
   }
-  postOrder(currentNode.left, visitedNodeNumber);
-  postOrder(currentNode.right, visitedNodeNumber);
-  visitedNodeNumber.push(currentNode.nodeNumber);
 }
 
 // === 단순 실행 테스트 ===
@@ -156,8 +190,7 @@ if (isDirectRun(import.meta.url)) {
 // C# 풀이
 // * https://github.com/fp024/programmers-csharp-coding-test-study/blob/master/Programmers.Solutions/Lv03/Exam42892.cs
 //
-// C#으로 먼저 풀어본걸 뭔가 외워서 풀게된 느낌이 난다. 😂
-// 재귀를 쓰지않고 풀어볼려했는데, 도저히 생각이 안난다. 😂😂
+// 재귀 코드를 반복문으로 바꿔보니 좀 더 나아진 것 같다. 👍👍
 //
 // === 다른 사람 풀이 확인 이후 의견 ===
 // ...

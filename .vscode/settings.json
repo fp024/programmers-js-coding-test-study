@@ -10,8 +10,7 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "code-runner.executorMap": {
     "javascript": "node",
-    // "typescript": "pnpm cross-env NODE_OPTIONS=\"--no-deprecation --disable-warning=ExperimentalWarning\" pnpm ts-node-esm" // 💡ts-node-esm 실행은 node v23 환경에서 정상 동작했다.
-    "typescript": "pnpm cross-env NODE_OPTIONS=\"--no-deprecation --disable-warning=ExperimentalWarning\" pnpm tsx" // 💡ts-node-esm 실행은 node v23 환경에서 정상 동작했다.
+    "typescript": "pnpm cross-env NODE_OPTIONS=\"--no-deprecation --disable-warning=ExperimentalWarning\" pnpm tsx"
   },
   "code-runner.clearPreviousOutput": true,
 
