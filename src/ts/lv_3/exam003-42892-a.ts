@@ -64,11 +64,11 @@ function createBinaryTree(nodes: Node[]) {
 /**
  * 노드 삽입
  *
- * @param parentNode 현재 노드
+ * @param rootNode 루트 노드
  * @param node 삽입할 노드
  */
-function insertNode(parentNode: Node, node: Node) {
-  let currentParentNode = parentNode;
+function insertNode(rootNode: Node, node: Node) {
+  let currentParentNode = rootNode;
   while (true) {
     if (node.x < currentParentNode.x) {
       if (currentParentNode.left === null) {
@@ -98,7 +98,7 @@ function insertNode(parentNode: Node, node: Node) {
  *   2) L, R 순으로 방문 해야하는데, 스택은 LIFO 이므로 R, L 순으로 스택에 넣음
  *   3) 스택이 비워질 때까지 1) ~ 3) 반복
  *
- * @param rootNode 현재 노드
+ * @param rootNode 루트 노드
  * @param visitedNodeNumber 방문 노드 넘버 목록
  */
 function preOrder(rootNode: Node, visitedNodeNumber: number[]) {
