@@ -89,16 +89,34 @@ function insertNode(parentNode: Node, node: Node) {
 /**
  * 전위 순회: P(방문) -> L -> R
  *
- * @param currentNode 현재 노드
+ * 스택을 활용한다면...
+ *
+ * 1. 일단 루트를 스택에 넣음.
+ * 2. 방문의 경우는 일단 스택에 넣음.
+ * 3. 반복
+ *   1) 스택에서 꺼내서 방문 처리
+ *   2) L, R 순으로 방문 해야하는데, 스택은 LIFO 이므로 R, L 순으로 스택에 넣음
+ *   3) 스택이 비워질 때까지 1) ~ 3) 반복
+ *
+ * @param rootNode 현재 노드
  * @param visitedNodeNumber 방문 노드 넘버 목록
  */
-function preOrder(currentNode: Node | null, visitedNodeNumber: number[]) {
-  if (currentNode === null) {
-    return;
+function preOrder(rootNode: Node | null, visitedNodeNumber: number[]) {
+  let currentNode = rootNode;
+  const stack = [currentNode];
+
+  while (stack.length > 0) {
+    currentNode = stack.pop()!;
+    visitedNodeNumber.push(currentNode.nodeNumber);
+
+    if (currentNode.right !== null) {
+      stack.push(currentNode.right);
+    }
+
+    if (currentNode.left !== null) {
+      stack.push(currentNode.left);
+    }
   }
-  visitedNodeNumber.push(currentNode.nodeNumber);
-  preOrder(currentNode.left, visitedNodeNumber);
-  preOrder(currentNode.right, visitedNodeNumber);
 }
 
 /**
