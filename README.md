@@ -70,8 +70,15 @@
   ```
 
 * 개별 테스트
-
+  * 터미널 
+    ```sh
+    pnpm test <test-name>
+    # 경로의 일부만 써도 동작한다.
+    pnpm test practice/prac000_000
+    ```
   * WebStorm 환경이라면 IDE에서 자체지원함.
+    * WebStorm에서 Vitest 4 테스트를 실행할 때, 테스트를 찾을 수 없는 문제가 있었는데, 2025.3 버전에서 수정된다고 한다.
+      * https://youtrack.jetbrains.com/issue/WEB-75191/No-tests-found-when-running-Vitest-4-tests
   * VSCode는 Vitest 확장을 설치해서 사용했을 때, 단순하고 편리 했었다.
     * https://marketplace.visualstudio.com/items?itemName=vitest.explorer
 
