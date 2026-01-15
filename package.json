@@ -2,23 +2,23 @@
   "name": "programmers-js-coding-test-study",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@10.25.0+sha512.5e82639027af37cf832061bcc6d639c219634488e0f2baebe785028a793de7b525ffcd3f7ff574f5e9860654e098fe852ba8ac5dd5cefe1767d23a020a92f501",
+  "packageManager": "pnpm@10.28.0+sha512.05df71d1421f21399e053fde567cea34d446fa02c76571441bfc1c7956e98e363088982d940465fd34480d4d90a0668bc12362f8aa88000a64e83d0b0e47be48",
   "engines": {
     "node": ">=16.17.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@types/node": "^24.10.2",
-    "@vitest/eslint-plugin": "^1.5.2",
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^24.10.8",
+    "@vitest/eslint-plugin": "^1.6.6",
     "cross-env": "^10.1.0",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "globals": "^16.5.0",
-    "prettier": "^3.7.4",
+    "prettier": "^3.8.0",
     "rimraf": "^6.1.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.49.0",
-    "vitest": "^4.0.15"
+    "typescript-eslint": "^8.53.0",
+    "vitest": "^4.0.17"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
