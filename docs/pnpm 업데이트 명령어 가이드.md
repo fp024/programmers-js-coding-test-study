@@ -178,6 +178,60 @@ pnpm up react --latest
 pnpm up react react-dom --latest
 ```
 
+## Yarn과의 차이점 ⚠️
+
+**중요: Yarn과 pnpm은 업데이트 동작이 완전히 다릅니다!**
+
+### Yarn (v2+, Berry)의 동작
+
+```bash
+# 1. yarn up (인자 없음)
+yarn up
+# → 에러! 패키지 지정 필수
+
+# 2. yarn up "*" (와일드카드)
+yarn up "*"
+# → 모든 패키지를 최신 버전으로 업데이트 (강제)
+# → package.json도 수정됨
+# → pnpm up --latest와 유사!
+
+# 3. yarn up package-name
+yarn up lodash
+# → lodash를 최신 버전으로 업데이트
+```
+
+### 핵심 차이점 정리
+
+| 명령어 | pnpm | Yarn (v2+) |
+|--------|------|------------|
+| `up` (인자 없음) | 모든 패키지 안전 업데이트 | ❌ 에러 |
+| `up "*"` | semver 범위 내 업데이트 | **최신 버전 강제 업데이트** |
+| package.json 수정 | ❌ | ✅ |
+
+**Yarn은 기본적으로 최신 버전 업데이트가 기본값입니다!**
+
+### Yarn에서 semver 범위 유지하기
+
+semver 범위를 존중하며 업데이트하려면 플래그 필요:
+
+```bash
+# ^1.0.0 형태로 유지하며 업데이트
+yarn up "*" --caret
+
+# ~1.0.0 형태로 유지하며 업데이트
+yarn up "*" --tilde
+```
+
+### 왜 헷갈릴까?
+
+만약 Yarn에서 pnpm으로 마이그레이션했다면:
+
+- **Yarn 습관**: `yarn up "*"` → 최신 버전으로 업데이트됨
+- **pnpm에서 같은 명령어**: `pnpm up "*"` → semver 범위 내에서만 업데이트
+- **pnpm에서 Yarn과 같은 동작**: `pnpm up --latest` 사용해야 함
+
+**결론: Yarn에서 온 경우 `pnpm up --latest`를 사용해야 예전처럼 최신 버전으로 업데이트됩니다!**
+
 ## 요약 표
 
 | 명령어 | semver 존중 | package.json 수정 | 용도 |
@@ -189,4 +243,5 @@ pnpm up react react-dom --latest
 ## 참고 자료
 
 - [pnpm CLI 문서](https://pnpm.io/cli/update)
+- [Yarn CLI 문서 (upgrade)](https://yarnpkg.com/cli/up)
 - [Semantic Versioning](https://semver.org/)
