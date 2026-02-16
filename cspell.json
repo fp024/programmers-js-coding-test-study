@@ -12,7 +12,10 @@
     "pnpm-workspace.yaml",
     "pnpm-lock.yaml"
   ],
-  "words": [],
+  "words": [
+    "noglob",
+    "prac"
+  ],
   "ignoreWords": [
     "PCCP",
     "ababababab",
